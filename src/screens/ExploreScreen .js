@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { StyleSheet, Text, View,Button, StatusBar, SafeAreaView, ScrollView } from 'react-native';
-// import {Header, MoreLinks, Colors, Debug, Reload} from '';
+
 
 
 const ExploreScreen = ({navigation}) => {
