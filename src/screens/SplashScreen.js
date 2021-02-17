@@ -10,10 +10,9 @@ import {
     Image
 } from 'react-native';
 // import * as Animatable from 'react-native-animatable';
-// import LinearGradient from 'react-native-linear-gradient';
-// import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { useTheme } from '@react-navigation/native';
-
+import { LinearGradient } from 'expo-linear-gradient';
 const SplashScreen = ({navigation}) => {
     const { colors } = useTheme();
 
@@ -29,14 +28,21 @@ const SplashScreen = ({navigation}) => {
            <View style={styles.footer}>
                <Text style={styles.title}>Siempre Conectados!</Text>
                <Text style={styles.text}>Inicia Sesión</Text>
-               {/* <TouchableOpacity onPress={alert('Click')}>
+               <View style={styles.button}>
+               <TouchableOpacity onPress={()=>alert('Click')}>
                    <LinearGradient
                    colors={['#08d4c4', '#01ab9d']}
                    style={styles.signIn}
                    >
-                    <Text style={styles.textSign}>Registrarme</Text>
+                   <Text style={styles.textSign}>Registrarme</Text> 
+                   <MaterialIcons
+                    name="navigate-next"
+                    color="#fff"
+                    size={20}
+                   />       
                    </LinearGradient>
-               </TouchableOpacity> */}
+           </TouchableOpacity>
+           </View>
            </View>
        </View>
     );
