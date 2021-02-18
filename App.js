@@ -49,7 +49,7 @@ const App = () => {
      <AuthContext.Provider value={authContext}>
     <NavigationContainer>
       { userToken != null ? (
-        <Drawer.Navigator DrawerContent={ props => <DrawerContent{...props}/> }>
+        <Drawer.Navigator drawerContent={ props => <DrawerContent{...props}/> }>
         <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
         <Drawer.Screen name="SupportScreen" component={SupportScreen} />
         <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
