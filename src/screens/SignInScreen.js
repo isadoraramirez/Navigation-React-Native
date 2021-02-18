@@ -6,6 +6,7 @@ import * as Animatable from 'react-native-animatable';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { LinearGradient } from 'expo-linear-gradient';
 import Feather from 'react-native-vector-icons/Feather';
+import {AuthContext} from '../components/Context';
 
 const SignInScreen = ({navigation}) => {
    
@@ -13,8 +14,11 @@ const SignInScreen = ({navigation}) => {
         email:'',
         password:'',
         check_textInputChange: false,
-        secureTextEntry: true
+        secureTextEntry: true,
+        confirm_secureTextEntry: true
     });
+
+    const {signIn} = React.useContext(AuthContext);
 
     const textInputChange = (val) => {
         if( val.length != 0){
@@ -46,6 +50,12 @@ const SignInScreen = ({navigation}) => {
           secureTextEntry: !data.secureTextEntry
       });
   }
+  const updateConfirmSecureTextEntry = () => {
+    setData({
+        ...data,
+        confirm_secureTextEntry: !data.sconfirm_secureTextEntry
+    });
+}
 
   return (
     <View style={styles.container}>
@@ -107,7 +117,14 @@ const SignInScreen = ({navigation}) => {
            />
            </TouchableOpacity>
        </View>
+       <TouchableOpacity>
+           <Text style={{color: '#009387', marginTop:15}}>Olvide mi contraseña</Text>
+       </TouchableOpacity>
        <View style= {styles.button}>
+           <TouchableOpacity
+           style={styles.signIn}
+           onPress={() =>{signIn()}}
+           >
            <LinearGradient
            colors={['#08d4c4', '#01ab9d']}
            style={styles.signIn}>
@@ -115,6 +132,8 @@ const SignInScreen = ({navigation}) => {
                    color: '#fff'
                }]}>Entrar</Text>
            </LinearGradient>
+           </TouchableOpacity>
+           
 
            <TouchableOpacity
                     onPress={() => navigation.navigate('SignUpScreen')}
@@ -126,7 +145,7 @@ const SignInScreen = ({navigation}) => {
                 >
                     <Text style={[styles.textSign, {
                         color: '#009387'
-                    }]}>Cerrar Sesión</Text>
+                    }]}>Registrarse</Text>
                 </TouchableOpacity>
 
        </View>
@@ -203,4 +222,5 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     }
   });
+  
 export default SignInScreen;

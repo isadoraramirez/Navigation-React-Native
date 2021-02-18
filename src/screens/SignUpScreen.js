@@ -6,6 +6,7 @@ import * as Animatable from 'react-native-animatable';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { LinearGradient } from 'expo-linear-gradient';
 import Feather from 'react-native-vector-icons/Feather';
+
 const SignInScreen = ({navigation}) => {
 
     const [data, setData] = React.useState({
@@ -71,7 +72,7 @@ const SignInScreen = ({navigation}) => {
             animation="fadeInUpBig"
             style={styles.footer}
         >
-            <ScrollView>
+            <View>
             <Text style={styles.text_footer}>Username</Text>
             <View style={styles.action}>
                 <FontAwesome 
@@ -203,7 +204,7 @@ const SignInScreen = ({navigation}) => {
                     }]}>Sign In</Text>
                 </TouchableOpacity>
             </View>
-            </ScrollView>
+            </View>
         </Animatable.View>
       </View>
     );

@@ -3,11 +3,13 @@ import { View,StyleSheet } from 'react-native';
 import {Avatar, Title, Caption, Paragraph, Drawer, Text, TouchableRipple, Switch} from 'react-native-paper';
 import { DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-//import{ AuthContext } from '../components/context';
+import{ AuthContext } from '../components/Context';
 
-export default function DrawerContent(props){
+ export function DrawerContent(props){
 
   const [isDarkTheme, setIsDarkTheme] = React.useState(false);
+  const AuthContext = React.createContext();
+  const { signOut } = React.useContext(AuthContext);
 
   const  toggleTheme  = () => {
     setIsDarkTheme(!isDarkTheme);
@@ -128,6 +130,8 @@ export default function DrawerContent(props){
         </View>
     );
 }
+
+// export default DrawerContent;
 
 const styles = StyleSheet.create({
     drawerContent: {
