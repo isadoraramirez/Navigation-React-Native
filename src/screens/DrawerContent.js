@@ -114,7 +114,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
                     </Drawer.Section>
                 </View>
             </DrawerContentScrollView>
-            <Drawer.Section style={styles.bottomDrawerSection}>
+            {/* <Drawer.Section style={styles.bottomDrawerSection}>
                 <DrawerItem 
                     icon={({color, size}) => (
                         <Icon 
@@ -126,7 +126,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
                     label="Sign Out"
                     onPress={() => {signOut()}}
                 />
-            </Drawer.Section>
+            </Drawer.Section> */}
         </View>
     );
 }
