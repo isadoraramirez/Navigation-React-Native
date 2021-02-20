@@ -1,16 +1,28 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
-const BookmarkScreen = () => {
+const BookmarkScreen = ({navigation, onPress}) => {
     return (
       <View style={styles.container}>
         <Text>Bookmark Screen</Text>
-        <Button
-          title="Click Here"
-          onPress={() => alert('Button Clicked!')}
-        />
-      </View>
-    );
+           
+    
+       <Button
+        title="Go to detail home"
+        onPress={() => navigation.navigate("Home")}
+      />
+       <Button
+        title="Go back"
+        onPress={() => navigation.goBack()}
+      />
+       <Button
+        title="Go to teh first screen"
+        onPress={() => navigation.popToTop()}
+      />
+    
+    </View>
+  
+    )
 };
 
 export default BookmarkScreen;

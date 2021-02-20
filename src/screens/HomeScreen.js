@@ -1,26 +1,77 @@
-import React from 'react';
+import React, { Component}from 'react';
+import Http from '../libs/http';
+import Details from '../components/Details';
+import { StyleSheet, Text, View,Button, FlatList, ActivityIndicator, onPress } from 'react-native';
 
-import { StyleSheet, Text, View,Button, StatusBar, SafeAreaView, ScrollView } from 'react-native';
-// import {Header, MoreLinks, Colors, Debug, Reload} from '';
+class HomeScreen extends Component{
 
+  state ={
+      coins: [],
+      loading: false
+  }
 
-const HomeScreen = ({navigation}) => {
-  return (
-    <View style= {styles.container}>
-       <Text>Home Screen</Text>
-       <Button
-        title="Go to detail screen"
-        onPress={() => navigation.navigate("Details")}
-      />
-    </View>
-  );
-};
+  componentDidMount = async() => {
+    this.setState({ loading :true })
+     
+      const res = await Http.instance.get("https://api.coinlore.net/api/tickers/");
+      
+      this.setState({ coins: res.data, loading:false});
 
-const styles = StyleSheet.create(
-    {flex:1,
-     paddingTop: 60
-    }
-)
+  }
+
+  handlePress= (coin) =>{
+      this.props.navigation.navigate('Details', { coin });
+      //console.log(coin)
+  }
+
+  render(){
+      const { coins, loading } = this.state;
+
+      return(
+            <View style= {styles.container}>
+              {loading ?
+                <ActivityIndicator
+                style={styles.loader} 
+                color= "green" 
+                size="large"/>
+              :null
+              }
+       <Text>Saldos</Text>
+       <FlatList
+          data={coins}
+          renderItem={({ item }) => 
+           <Details
+            item={item}
+            onPress={() => {this.handlePress (item)}}
+            />
+        }
+       />
+           </View>
+
+      );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, 
+    alignItems: "center"
+} ,
+btn: {
+    padding: 8,
+    backgroundColor: "pink",
+    margin:16,
+    borderRadius:8
+},
+btnText:{
+    color: "black",
+    textAlign: "center"
+},
+loader:{
+    marginTop: 220,
+}
+  })
+
 
 
 export default HomeScreen;

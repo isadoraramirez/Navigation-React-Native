@@ -66,7 +66,7 @@ const SignInScreen = ({navigation}) => {
        <Animatable.View 
        animation="fadeInUpBig"
        style={styles.footer}>
-       <Text style={styles.text_footer}>Email</Text>
+       <Text style={styles.text_footer}>E-mail</Text>
        <View style={styles.action}>
            <FontAwesome
                name="user-o"
@@ -74,7 +74,7 @@ const SignInScreen = ({navigation}) => {
                size={20}
            />
            <TextInput
-               placeholder="You Email"
+               placeholder="E-mail"
                style={styles.TextInput}
                autoCapitalize="none"
                onChangeText={(val)=>textInputChange(val)}
@@ -93,7 +93,7 @@ const SignInScreen = ({navigation}) => {
        </View>
        <Text style={[styles.text_footer,{
        marginTop: 35
-    }]}>Password</Text>
+    }]}>Contraseña</Text>
        <View style={styles.action}>
            <Feather
                name="lock"
@@ -101,7 +101,7 @@ const SignInScreen = ({navigation}) => {
                size={20}
            />
            <TextInput
-               placeholder="You Password"
+               placeholder="Contraseña"
                secureTextEntry={data.secureTextEntry ? true : false}
                style={styles.TextInput}
                autoCapitalize="none"

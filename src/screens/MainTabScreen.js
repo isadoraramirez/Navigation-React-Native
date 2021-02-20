@@ -31,7 +31,7 @@ const MainTabScreen = () => (
         ) }}
       />
       <Tab.Screen
-        name="Notifications"
+        name="Details"
         component={DetailsStackScreen}
         options={{ tabBarLabel: 'Updates',
         tabBarColor:'#1f65ff',

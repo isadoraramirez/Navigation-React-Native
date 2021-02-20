@@ -1,34 +1,37 @@
-import React from 'react';
-import { StyleSheet, Text, View,Button, StatusBar, SafeAreaView, ScrollView } from 'react-native';
+import React, { Component }from 'react';
+import {  Text, View,Button } from 'react-native';
 
-const DetailsScreen = ({navigation}) => {
+
+class DetailsScreen extends Component {
+ 
+
+
+  componentDidMount() {
+    console.log(this.props.navigation.state);
+  }
+
+
+
+  render(){
   return(
-    <View style={{ flex:1, 
-    // alignContent: 'center', 
+    <View style={{ flex:1,  
      paddingTop: 30
 }
     }>
-      <Text>Detail Screen</Text>
-      <Button
-        title="Go to detail screen..again"
-        onPress={() => navigation.push("Details")}
-      />
-       <Button
-        title="Go to detail home"
-        onPress={() => navigation.navigate("Home")}
-      />
-       <Button
+      <Text>Detalles</Text>
+     
+
+
+       
+       {/* <Button
         title="Go back"
         onPress={() => navigation.goBack()}
-      />
-       <Button
-        title="Go to teh first screen"
-        onPress={() => navigation.popToTop()}
-      />
+      /> */}
     
     </View>
   )
 }
+};
 
 
 export default DetailsScreen;
