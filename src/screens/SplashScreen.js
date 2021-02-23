@@ -26,20 +26,21 @@ const SplashScreen = ({navigation}) => {
                style={styles.logo}
                resizeMode="stretch"
                />
+               <Text style={styles.header_title}>Red Potencia</Text>
            </View>
            <Animatable.View 
              style={styles.footer}
              animation="fadeInUpBig"
              >
                <Text style={styles.title}>Siempre Conectados!</Text>
-               <Text style={styles.text}>Inicia Sesión</Text>
+               {/* <Text style={styles.text}>Inicia Sesión</Text> */}
                <View style={styles.button}>
                <TouchableOpacity onPress={()=>navigation.navigate('SignInScreen')}>
                    <LinearGradient
                    colors={['#08d4c4', '#01ab9d']}
                    style={styles.signIn}
                    >
-                   <Text style={styles.textSign}>Registrarme</Text> 
+                   <Text style={styles.textSign}>Entrar</Text> 
                    <MaterialIcons
                     name="navigate-next"
                     color="#fff"
@@ -60,6 +61,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1, 
     backgroundColor: '#009387'
+  },
+  header_title:{
+    paddingTop: 35,
+    fontSize: 30,
+    fontWeight: 'bold',
+    color: '#fff',
   },
   header: {
       flex: 2,

@@ -1,8 +1,17 @@
 import React, { Component}from 'react';
 import Http from '../libs/http';
 import Details from '../components/Details';
-import { StyleSheet, Text, View,Button, FlatList, ActivityIndicator, onPress } from 'react-native';
+import {  Image, StatusBar,
+  TouchableOpacity,
+  ScrollView,StyleSheet, Text, View,Button, FlatList, ActivityIndicator, onPress } from 'react-native';
+  import {useTheme} from '@react-navigation/native';
 
+  import Swiper from 'react-native-swiper';
+  import Ionicons from 'react-native-vector-icons/Ionicons';
+  import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+  import Fontisto from 'react-native-vector-icons/Fontisto';
+  import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+  
 class HomeScreen extends Component{
 
   state ={
@@ -23,7 +32,12 @@ class HomeScreen extends Component{
       this.props.navigation.navigate('Details', { coin });
       //console.log(coin)
   }
+  //////////////////////////////////////
 
+
+
+
+///////////////////////////////////////////////
   render(){
       const { coins, loading } = this.state;
 
@@ -32,7 +46,7 @@ class HomeScreen extends Component{
               {loading ?
                 <ActivityIndicator
                 style={styles.loader} 
-                color= "green" 
+                color= "pink" 
                 size="large"/>
               :null
               }

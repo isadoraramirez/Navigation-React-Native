@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ActivityIndicator, StyleSheet, Text, View,StatusBar,Button, Platform, TouchableOpacity, Dimensions, Touchable} from 'react-native';
+import { ActivityIndicator, StyleSheet, Text, View,StatusBar,Button, Platform, Dimensions, Touchable} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 

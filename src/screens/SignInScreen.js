@@ -61,7 +61,7 @@ const SignInScreen = ({navigation}) => {
     <View style={styles.container}>
         <StatusBar backgroundColor='#009387' barStyle="light-content"/>
         <View style={styles.header}>
-       <Text styles={styles.text_header}>Bienvenido</Text>
+       <Text style={styles.text_header}>Bienvenido</Text>
        </View>
        <Animatable.View 
        animation="fadeInUpBig"
@@ -215,11 +215,16 @@ const styles = StyleSheet.create({
         height: 50,
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 10
+        borderRadius: 10,
+        fontSize: 40,
     },
     textSign: {
         fontSize: 18,
         fontWeight: 'bold'
+    },
+    TextsignIn:{
+    fontSize: 18,
+    fontWeight: 'bold'
     }
   });
   

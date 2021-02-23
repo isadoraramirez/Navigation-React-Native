@@ -4,7 +4,7 @@ import { View, Text, Button, StyleSheet } from 'react-native';
 const BookmarkScreen = ({navigation, onPress}) => {
     return (
       <View style={styles.container}>
-        <Text>Bookmark Screen</Text>
+        <Text>Referencia de Pago</Text>
            
     
        <Button

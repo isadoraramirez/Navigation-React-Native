@@ -40,8 +40,8 @@ import{ AuthContext } from '../components/Context';
                                <Caption style={styles.caption}>Numero</Caption>
                              </View>
                              <View >
-                               <Paragraph style={[styles.paragraph, styles.caption]}>Plan</Paragraph>
-                               <Caption style={styles.caption}>Total</Caption>
+                               <Paragraph style={[styles.paragraph, styles.caption]}>100Gb</Paragraph>
+                               <Caption style={styles.caption}>Plan</Caption>
                              </View>
                         </View>
                     </View>
@@ -54,7 +54,7 @@ import{ AuthContext } from '../components/Context';
                                 size={size}
                                 />
                             )}
-                            label="Home"
+                            label="Inicio"
                             onPress={() => {props.navigation.navigate('Home')}}
                         />
                         <DrawerItem 
@@ -65,7 +65,7 @@ import{ AuthContext } from '../components/Context';
                                 size={size}
                                 />
                             )}
-                            label="Profile"
+                            label="Perfil"
                             onPress={() => {props.navigation.navigate('Profile')}}
                         />
                         <DrawerItem 
@@ -76,7 +76,7 @@ import{ AuthContext } from '../components/Context';
                                 size={size}
                                 />
                             )}
-                            label="Bookmarks"
+                            label="Referencia de Pago"
                             onPress={() => {props.navigation.navigate('BookmarkScreen')}}
                         />
                         <DrawerItem 
@@ -87,7 +87,7 @@ import{ AuthContext } from '../components/Context';
                                 size={size}
                                 />
                             )}
-                            label="Settings"
+                            label="Preguntas Frecuentes"
                             onPress={() => {props.navigation.navigate('SettingsScreen')}}
                         />
                         <DrawerItem 
@@ -98,14 +98,14 @@ import{ AuthContext } from '../components/Context';
                                 size={size}
                                 />
                             )}
-                            label="Support"
+                            label="Ayuda"
                             onPress={() => {props.navigation.navigate('SupportScreen')}}
                         />
                     </Drawer.Section>
                     <Drawer.Section title="Preferences">
                         <TouchableRipple onPress={() => {toggleTheme()}}>
                             <View style={styles.preference}>
-                                <Text>Dark Theme</Text>
+                                <Text>Tema Oscuro</Text>
                                 <View pointerEvents="none">
                                     <Switch value={isDarkTheme}/>
                                 </View>
@@ -123,7 +123,7 @@ import{ AuthContext } from '../components/Context';
                         size={size}
                         />
                     )}
-                    label="Sign Out"
+                    label="Salir"
                     onPress={() => {signOut()}}
                 />
             </Drawer.Section>
@@ -162,6 +162,7 @@ const styles = StyleSheet.create({
     paragraph: {
       fontWeight: 'bold',
       marginRight: 3,
+      marginRight: 30,
     },
     drawerSection: {
       marginTop: 15,

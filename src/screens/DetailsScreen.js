@@ -20,13 +20,6 @@ class DetailsScreen extends Component {
     }>
       <Text>Detalles</Text>
      
-
-
-       
-       {/* <Button
-        title="Go back"
-        onPress={() => navigation.goBack()}
-      /> */}
     
     </View>
   )

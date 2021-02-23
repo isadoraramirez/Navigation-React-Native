@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from './HomeScreen';
 import DetailsScreen from './DetailsScreen';
-import ExploreScreen from './ExploreScreen ';
+import CardScreen from './CardScreen ';
 import ProfileScreen from './ProfileScreen';
 const HomeStack = createStackNavigator();
 const DetailsStack = createStackNavigator();
@@ -24,7 +24,7 @@ const MainTabScreen = () => (
       <Tab.Screen
         name="Home"
         component={HomeStackScreen}
-        options={{ tabBarLabel: 'Home',
+        options={{ tabBarLabel: 'Inicio',
         tabBarColor:'#009387',
         tabBarIcon: ({ color }) => (
             <Icon name="ios-home" color={color} size= {26}/>
@@ -33,7 +33,7 @@ const MainTabScreen = () => (
       <Tab.Screen
         name="Details"
         component={DetailsStackScreen}
-        options={{ tabBarLabel: 'Updates',
+        options={{ tabBarLabel: 'Detalles',
         tabBarColor:'#1f65ff',
         tabBarIcon: ({ color }) => (
             <Icon name="ios-notifications" color={color} size= {26}/>
@@ -42,7 +42,7 @@ const MainTabScreen = () => (
       <Tab.Screen
         name="Profile"
         component={ProfileScreen}
-        options={{ tabBarLabel: 'Profile',
+        options={{ tabBarLabel: 'Perfil',
         tabBarColor:'#694fad',
         tabBarIcon: ({ color }) => (
             <Icon name="ios-person" color={color} size= {26}/>
@@ -50,9 +50,9 @@ const MainTabScreen = () => (
       />
       <Tab.Screen
         name="Explore"
-        component={ExploreScreen}
+        component={CardScreen}
         options={{ 
-            tabBarLabel: 'Explore',
+            tabBarLabel: 'Recarga',
             tabBarColor:'#d02860',
             tabBarIcon: ({ color }) => (
                 <Icon name="ios-aperture" color={color} size= {26}/>
@@ -75,7 +75,7 @@ const HomeStackScreen = ({navigation}) => (
     }}>
       <HomeStack.Screen name="Home"
       component={HomeScreen}
-      options={{title:'Overview',
+      options={{title:'Inicio',
       headerLeft: ()=> (
         <Icon.Button name= "ios-menu" size={25}
         backgroundColor="#009387" onPress={()=> {navigation.openDrawer()

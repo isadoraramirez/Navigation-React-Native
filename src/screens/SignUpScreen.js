@@ -196,7 +196,7 @@ const SignInScreen = ({navigation}) => {
                     style={[styles.signIn, {
                         borderColor: '#009387',
                         borderWidth: 1,
-                        marginTop: 15
+                        marginTop: 10
                     }]}
                 >
                     <Text style={[styles.textSign, {
@@ -253,7 +253,7 @@ const styles = StyleSheet.create({
     },
     button: {
         alignItems: 'center',
-        marginTop: 50
+        marginTop: 25
     },
     signIn: {
         width: '100%',
