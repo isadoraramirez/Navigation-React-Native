@@ -106,21 +106,15 @@ const SettingsScreen = ({navigation}) => {
             fontWeight: 'bold',
             color: '#333',
           }}>
-          Recently Viewed
+          Preguntas Frecuentes
         </Text>
         <View style={styles.card}>
-          <View style={styles.cardImgWrapper}>
-            {/* <Image
-              source={require('../assets/banners/food-banner2.jpg')}
-              resizeMode="cover"
-              style={styles.cardImg}
-            /> */}
-          </View>
+        
           <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Amazing Food Place</Text>
+            <Text style={styles.cardTitle}>Questions</Text>
             {/* <StarRating ratings={4} reviews={99} /> */}
             <Text style={styles.cardDetails}>
-              Amazing description for this amazing place
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid."
             </Text>
           </View>
         </View>
@@ -132,29 +126,8 @@ const SettingsScreen = ({navigation}) => {
               style={styles.cardImg}
             /> */}
           </View>
-          <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Amazing Food Place</Text>
-            {/* <StarRating ratings={4} reviews={99} /> */}
-            <Text style={styles.cardDetails}>
-              Amazing description for this amazing place
-            </Text>
-          </View>
-        </View>
-        <View style={styles.card}>
-          <View style={styles.cardImgWrapper}>
-            {/* <Image
-              source={require('../assets/banners/food-banner4.jpg')}
-              resizeMode="cover"
-              style={styles.cardImg}
-            /> */}
-          </View>
-          <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Amazing Food Place</Text>
-            {/* <StarRating ratings={4} reviews={99} /> */}
-            <Text style={styles.cardDetails}>
-              Amazing description for this amazing place
-            </Text>
-          </View>
+          
+          
         </View>
       </View>
     </ScrollView>

@@ -23,8 +23,8 @@ class CardScreen extends Component {
           style={{
             //widt: 280,
             marginTop: 20,
-            backgroundColor: "#d02860",
-            borderRadius: 15,
+            backgroundColor: "#c74a73",
+            borderRadius: 10,
           }}
         >
           <TouchableOpacity

@@ -38,13 +38,7 @@ class DetailsScreen extends Component {
           Detalles de Consumo
         </Text>
         <View style={styles.card}>
-          <View style={styles.cardImgWrapper}>
-            {/* <Image
-              source={require('../assets/banners/food-banner2.jpg')}
-              resizeMode="cover"
-              style={styles.cardImg}
-            /> */}
-          </View>
+        
           <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Mensajes</Text>
             {/* <StarRating ratings={4} reviews={99} /> */}
@@ -54,13 +48,7 @@ class DetailsScreen extends Component {
           </View>
         </View>
         <View style={styles.card}>
-          <View style={styles.cardImgWrapper}>
-            {/* <Image
-              source={require('../assets/banners/food-banner3.jpg')}
-              resizeMode="cover"
-              style={styles.cardImg}
-            /> */}
-          </View>
+        
           <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Llamadas</Text>
             {/* <StarRating ratings={4} reviews={99} /> */}
@@ -70,13 +58,7 @@ class DetailsScreen extends Component {
           </View>
         </View>
         <View style={styles.card}>
-          <View style={styles.cardImgWrapper}>
-            {/* <Image
-              source={require('../assets/banners/food-banner4.jpg')}
-              resizeMode="cover"
-              style={styles.cardImg}
-            /> */}
-          </View>
+         
           <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Internet</Text>
             {/* <StarRating ratings={4} reviews={99} /> */}
