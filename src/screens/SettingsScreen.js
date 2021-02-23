@@ -19,13 +19,21 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 //import StarRating from '../components/StarRating';
+// class SettingsScreen extends Component{
+//   render(){
+//     return
+//     <Text>
+//   }
 
+// }
 const SettingsScreen = ({navigation}) => {
+
+
   const theme = useTheme();
 
   return (
     <ScrollView style={styles.container}>
-      <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
+      {/* <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} /> */}
       <View style={styles.sliderContainer}>
         <Swiper
           autoplay
@@ -63,9 +71,9 @@ const SettingsScreen = ({navigation}) => {
             navigation.navigate('CardListScreen', {title: 'Restaurant'})
           }>
           <View style={styles.categoryIcon}>
-            <Ionicons name="ios-restaurant" size={35} color="#37d4c4" />
+            <Ionicons name="email-box" size={35} color="#37d4c4" />
           </View>
-          <Text style={styles.categoryBtnTxt}>Restaurant</Text>
+          <Text style={styles.categoryBtnTxt}>Mensajes</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.categoryBtn}
@@ -74,18 +82,18 @@ const SettingsScreen = ({navigation}) => {
           }>
           <View style={styles.categoryIcon}>
             <MaterialCommunityIcons
-              name="food-fork-drink"
+              name="phone"
               size={35}
               color="#37d4c4"
             />
           </View>
-          <Text style={styles.categoryBtnTxt}>Fastfood Center</Text>
+          <Text style={styles.categoryBtnTxt}>Llamadas</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
           <View style={styles.categoryIcon}>
-            <MaterialCommunityIcons name="food" size={35} color="#37d4c4" />
+            <MaterialCommunityIcons name="navigation" size={35} color="#37d4c4" />
           </View>
-          <Text style={styles.categoryBtnTxt}>Snacks Corner</Text>
+          <Text style={styles.categoryBtnTxt}>Internet</Text>
         </TouchableOpacity>
       </View>
       

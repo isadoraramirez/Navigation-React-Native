@@ -8,6 +8,7 @@ import HomeScreen from './HomeScreen';
 import DetailsScreen from './DetailsScreen';
 import CardScreen from './CardScreen ';
 import ProfileScreen from './ProfileScreen';
+
 const HomeStack = createStackNavigator();
 const DetailsStack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
