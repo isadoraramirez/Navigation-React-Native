@@ -13,7 +13,7 @@ export default function DealsScreen({ navigation: { navigate } }) {
 				width:250,
 				height: 40,
 			  }}>
-						<TouchableOpacity onPress={()=>navigate('CardScreen')}>
+						<TouchableOpacity onPress={()=>navigate('PaymentScreen')}>
 					   <LinearGradient
 					   colors={['#c4a2fa', '#e1d2fa']}
 					   style={styles.signIn}
@@ -30,7 +30,7 @@ export default function DealsScreen({ navigation: { navigate } }) {
 				height: 40,
 				borderRadius: 50,
 			  }}  >
-						<TouchableOpacity onPress={()=>navigate('DetailsScreen')}>
+						<TouchableOpacity onPress={()=>navigate('PaymentScreen')}>
 					   <LinearGradient
 					   colors={['#c4a2fa', '#e1d2fa']}
 					   style={styles.signIn}
@@ -47,7 +47,7 @@ export default function DealsScreen({ navigation: { navigate } }) {
 				height: 40,
 				borderRadius: 20,
 			  }}>
-						<TouchableOpacity onPress={()=>navigate('DetailsScreen')}>
+						<TouchableOpacity onPress={()=>navigate('PaymentScreen')}>
 					   <LinearGradient
 					   colors={['#c4a2fa', '#e1d2fa']}
 					   style={styles.signIn}
@@ -63,7 +63,7 @@ export default function DealsScreen({ navigation: { navigate } }) {
 				height: 40,
 				borderRadius: 50,
 			  }}  >
-						<TouchableOpacity onPress={()=>navigate('DetailsScreen')}>
+						<TouchableOpacity onPress={()=>navigate('homecopia')}>
 					   <LinearGradient
 					   colors={['#c4a2fa', '#e1d2fa']}
 					   style={styles.signIn}
@@ -74,7 +74,7 @@ export default function DealsScreen({ navigation: { navigate } }) {
 			   </TouchableOpacity>
 			   </View>
 			   
-			   <TouchableOpacity  style={{
+			   {/* <TouchableOpacity  style={{
 				marginTop: 10,
 			  }} onPress={()=>navigate('PaymentScreen')}>
 					   <LinearGradient
@@ -84,7 +84,7 @@ export default function DealsScreen({ navigation: { navigate } }) {
 					   <Text style={styles.textSign}>Elegir forma de pago</Text> 
 		
 					   </LinearGradient>
-			   </TouchableOpacity>
+			   </TouchableOpacity> */}
 			   </View>
 			</SafeAreaView>
 		);
