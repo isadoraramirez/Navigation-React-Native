@@ -22,10 +22,9 @@ import{ AuthContext } from '../components/Context';
                     <View style={styles.userInfoSection}>
                         <View style={{flexDirection:'row',marginTop:15}}>
                             <Avatar.Image
-                            source={{
-                                uri:'https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes.png'
-                            }}
+                            source={require("../../assets/avatar.png")}
                             size={50}
+                            backgroundColor= {'white'}
                             />
                             <View style={{marginLeft: 15,flexDirection: 'column'}}>
                               <Title style={styles.title}>Usuario
@@ -42,6 +41,10 @@ import{ AuthContext } from '../components/Context';
                              <View >
                                <Paragraph style={[styles.paragraph, styles.caption]}>100Gb</Paragraph>
                                <Caption style={styles.caption}>Plan</Caption>
+                             </View>
+                             <View >
+                               <Paragraph style={[styles.paragraph, styles.caption]}>11/03/22</Paragraph>
+                               <Caption style={styles.caption}>Vigencia</Caption>
                              </View>
                         </View>
                     </View>
@@ -60,12 +63,12 @@ import{ AuthContext } from '../components/Context';
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="account-outline" 
+                                name="credit-card" 
                                 color={color}
                                 size={size}
                                 />
                             )}
-                            label="Perfil"
+                            label="Recarga"
                             onPress={() => {props.navigation.navigate('Profile')}}
                         />
                         <DrawerItem 

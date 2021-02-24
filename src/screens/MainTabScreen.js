@@ -43,10 +43,10 @@ const MainTabScreen = () => (
       <Tab.Screen
         name="Profile"
         component={ProfileScreen}
-        options={{ tabBarLabel: 'Perfil',
+        options={{ tabBarLabel: 'Recarga',
         tabBarColor:'#694fad',
         tabBarIcon: ({ color }) => (
-            <Icon name="ios-person" color={color} size= {26}/>
+            <Icon name="pricetag" color={color} size= {26}/>
         ) }}
       />
       <Tab.Screen

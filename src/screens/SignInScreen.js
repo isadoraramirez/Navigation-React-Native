@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {StyleSheet, Text, View,StatusBar,Button, Platform, TouchableOpacity, Dimensions, Touchable} from 'react-native';
+import {ImageBackground ,StyleSheet, Text, View,StatusBar,Button, Platform, TouchableOpacity, Dimensions, Touchable} from 'react-native';
 import { TextInput} from 'react-native-gesture-handler';
 import * as Animatable from 'react-native-animatable';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -59,6 +59,8 @@ const SignInScreen = ({navigation}) => {
 
   return (
     <View style={styles.container}>
+        <ImageBackground source={require('../../assets/background.jpeg')}
+               style={styles.bckg}>
         <StatusBar backgroundColor='#009387' barStyle="light-content"/>
         <View style={styles.header}>
        <Text style={styles.text_header}>Bienvenido</Text>
@@ -135,7 +137,7 @@ const SignInScreen = ({navigation}) => {
            </TouchableOpacity>
            
 
-           <TouchableOpacity
+           {/* <TouchableOpacity
                     onPress={() => navigation.navigate('SignUpScreen')}
                     style={[styles.signIn, {
                         borderColor: '#009387',
@@ -146,10 +148,11 @@ const SignInScreen = ({navigation}) => {
                     <Text style={[styles.textSign, {
                         color: '#009387'
                     }]}>Registrarse</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
 
        </View>
     </Animatable.View>
+    </ImageBackground>
     </View>
   );
 };
@@ -159,6 +162,10 @@ const styles = StyleSheet.create({
       flex: 1, 
       backgroundColor: '#009387'
     },
+    bckg:{
+        flex: 2,
+          justifyContent: 'center',
+      },
     header: {
         flex: 1,
         justifyContent: 'flex-end',

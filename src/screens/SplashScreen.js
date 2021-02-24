@@ -2,6 +2,7 @@ import React from 'react';
 import { 
     View, 
     Text, 
+    ImageBackground,
     Button,
     TouchableOpacity, 
     Dimensions,
@@ -13,11 +14,14 @@ import * as Animatable from 'react-native-animatable';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useTheme } from '@react-navigation/native';
+
 const SplashScreen = ({navigation}) => {
     const { colors } = useTheme();
 
     return (
        <View style={styles.container}>
+         <ImageBackground source={require('../../assets/background.jpeg')}
+               style={styles.bckg}>
            <View style={styles.header}>
                <Animatable.Image
                 animation="bounceIn"
@@ -33,8 +37,7 @@ const SplashScreen = ({navigation}) => {
              style={styles.footer}
              animation="fadeInUpBig"
              >
-               <Text style={styles.title}>Siempre Conectados!</Text>
-               {/* <Text style={styles.text}>Inicia Sesión</Text> */}
+               <Text style={styles.title}>La mayor cobertura</Text>
                <View style={styles.button}>
                <TouchableOpacity onPress={()=>navigation.navigate('SignInScreen')}>
                    <LinearGradient
@@ -51,6 +54,7 @@ const SplashScreen = ({navigation}) => {
            </TouchableOpacity>
            </View>
            </Animatable.View>
+           </ImageBackground>
        </View>
     );
 };
@@ -61,7 +65,11 @@ const {height} = Dimensions.get("screen");
 const styles = StyleSheet.create({
   container: {
     flex: 1, 
-    backgroundColor: '#009387'
+    // backgroundColor: '#009387'
+  },
+  bckg:{
+    flex: 2,
+      justifyContent: 'center',
   },
   header_red:{
     flexDirection: 'row',
