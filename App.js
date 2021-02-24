@@ -8,6 +8,8 @@ import DetailsScreen from './src/screens/DetailsScreen';
 import SupportScreen from './src/screens/SupportScreen';
 import SettingsScreen from './src/screens/SettingsScreen';
 import BookmarkScreen from './src/screens/BookmarkScreen';
+import PaymentScreen from './src/screens/PaymentScreen';
+// import CardScreen from './src/screens/CardScreen';
 import RootStackScreen from './src/screens/RootStackScreen';
 import {DrawerContent} from './src/screens/DrawerContent';
 import { AuthContext } from './src/components/Context';
@@ -55,7 +57,9 @@ const App = () => {
         <Drawer.Screen name="DetailsScreen" component={DetailsScreen} />
         <Drawer.Screen name="SupportScreen" component={SupportScreen} />
         <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
-        <Drawer.Screen name="BookmarkScreen" component={BookmarkScreen} />       
+        <Drawer.Screen name="BookmarkScreen" component={BookmarkScreen} /> 
+        <Drawer.Screen name="PaymentScreen" component={PaymentScreen} /> 
+        {/* <Drawer.Screen name="CardScreen" component={CardScreen} /> */}
       </Drawer.Navigator> 
       )
       :<RootStackScreen/>

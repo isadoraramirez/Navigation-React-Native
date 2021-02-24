@@ -47,21 +47,6 @@ import { LinearGradient } from 'expo-linear-gradient';
                 </View>
 
                 <View style={{ marginTop: 32 }}>
-                    {/* <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-                        <View style={styles.mediaImageContainer}>
-                            <Image source={require("./assets/media1.jpg")} style={styles.image} resizeMode="cover"></Image>
-                        </View>
-                        <View style={styles.mediaImageContainer}>
-                            <Image source={require("./assets/media2.jpg")} style={styles.image} resizeMode="cover"></Image>
-                        </View>
-                        <View style={styles.mediaImageContainer}>
-                            <Image source={require("./assets/media3.jpg")} style={styles.image} resizeMode="cover"></Image>
-                        </View>
-                    </ScrollView> */}
-                    {/* <View style={styles.mediaCount}>
-                        <Text style={[styles.text, { fontSize: 24, color: "#DFD8C8", fontWeight: "300" }]}>70</Text>
-                        <Text style={[styles.text, { fontSize: 12, color: "#DFD8C8", textTransform: "uppercase" }]}>GB</Text>
-                    </View> */}
                 </View>
                 <Text style={[styles.subText, styles.recent]}>Servicios Contratados</Text>
                 <View style={{ alignItems: "center" }}>
@@ -83,10 +68,6 @@ import { LinearGradient } from 'expo-linear-gradient';
                         </View>
                     </View>
 
-                    {/* <View style={styles.mediaCount}onPress={()=> {navigation.navigate('Details')
-        }}>
-                        <Text style={[styles.text, { fontSize: 12, color: "#DFD8C8", textTransform: "uppercase" }]}>Destalles de Consumo</Text>
-                    </View> */}
                     <View style={styles.button}>
                     <TouchableOpacity onPress={()=>navigation.navigate('DetailsScreen')}>
                    <LinearGradient

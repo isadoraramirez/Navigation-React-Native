@@ -2,12 +2,14 @@ import React, { Component }from 'react';
 import {   View,
   Text,
   Image,
+  Touchable,
   StyleSheet,
   StatusBar,
   TouchableOpacity,
   ScrollView, } from 'react-native';
+  import { LinearGradient } from 'expo-linear-gradient';
 import Swiper from 'react-native-swiper';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import {Ionicons, MaterialIcons} from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
@@ -41,39 +43,52 @@ class DetailsScreen extends Component {
         
           <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Mensajes</Text>
-            {/* <StarRating ratings={4} reviews={99} /> */}
-            <Text style={styles.cardDetails}>
-              Consumo de mensajes
-            </Text>
+            <Text style={styles.cardDetails}>Iniciales</Text>
+            <Text style={styles.cardDetails}>Consumidos</Text>
+            <Text style={styles.cardDetails}>Restantes</Text>
           </View>
         </View>
         <View style={styles.card}>
         
           <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Llamadas</Text>
-            {/* <StarRating ratings={4} reviews={99} /> */}
-            <Text style={styles.cardDetails}>
-              Detalles de llamadas
-            </Text>
+            <Text style={styles.cardDetails}>Iniciales</Text>
+            <Text style={styles.cardDetails}>Consumidos</Text>
+            <Text style={styles.cardDetails}>Restantes</Text>
           </View>
         </View>
         <View style={styles.card}>
          
           <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Internet</Text>
-            {/* <StarRating ratings={4} reviews={99} /> */}
-            <Text style={styles.cardDetails}>
-              Megas de navegación
-            </Text>
+            <Text style={styles.cardDetails}>Iniciales</Text>
+            <Text style={styles.cardDetails}>Consumidos</Text>
+            <Text style={styles.cardDetails}>Restantes</Text>
           </View>
         </View>
       </View>
-     
-    
     </View>
   )
 }
 };
+
+// const navigation =({navigation}) => {
+//   return (
+// <TouchableOpacity onPress={()=>navigation.navigate('DetailsScreen')}>
+// <LinearGradient
+// colors={['#08d4c4', '#01ab9d']}
+// style={styles.signIn}
+// >
+// <Text style={styles.textSign}>DETALLES DE CONSUMO</Text> 
+// <MaterialIcons
+//  name="navigate-next"
+//  color="#fff"
+//  size={20}
+// />       
+// </LinearGradient>
+// </TouchableOpacity> 
+// )
+// }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
