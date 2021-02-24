@@ -69,7 +69,7 @@ import{ AuthContext } from '../components/Context';
                                 />
                             )}
                             label="Recarga"
-                            onPress={() => {props.navigation.navigate('Profile')}}
+                            onPress={() => {props.navigation.navigate('DealsScreen')}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
@@ -90,7 +90,7 @@ import{ AuthContext } from '../components/Context';
                                 size={size}
                                 />
                             )}
-                            label="Preguntas Frecuentes"
+                            label="Datos de Facturación"
                             onPress={() => {props.navigation.navigate('SettingsScreen')}}
                         />
                         <DrawerItem 

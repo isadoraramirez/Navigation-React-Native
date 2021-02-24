@@ -46,6 +46,7 @@ class DetailsScreen extends Component {
             <Text style={styles.cardDetails}>Iniciales</Text>
             <Text style={styles.cardDetails}>Consumidos</Text>
             <Text style={styles.cardDetails}>Restantes</Text>
+            <Text style={styles.cardDetails}>Vigencia</Text>
           </View>
         </View>
         <View style={styles.card}>
@@ -55,6 +56,7 @@ class DetailsScreen extends Component {
             <Text style={styles.cardDetails}>Iniciales</Text>
             <Text style={styles.cardDetails}>Consumidos</Text>
             <Text style={styles.cardDetails}>Restantes</Text>
+            <Text style={styles.cardDetails}>Vigencia</Text>
           </View>
         </View>
         <View style={styles.card}>
@@ -64,6 +66,7 @@ class DetailsScreen extends Component {
             <Text style={styles.cardDetails}>Iniciales</Text>
             <Text style={styles.cardDetails}>Consumidos</Text>
             <Text style={styles.cardDetails}>Restantes</Text>
+            <Text style={styles.cardDetails}>Vigencia</Text>
           </View>
         </View>
       </View>
@@ -150,7 +153,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   card: {
-    height: 100,
+    height: 150,
     marginVertical: 10,
     flexDirection: 'row',
     shadowColor: '#999',
@@ -185,6 +188,7 @@ const styles = StyleSheet.create({
   },
   cardDetails: {
     fontSize: 12,
+    marginBottom:12,
     color: '#444',
   },
 });
