@@ -1,8 +1,9 @@
 import React, { Component}from 'react';
 import Http from '../libs/http';
 import Details from '../components/Details';
-import { StyleSheet, Text, View,Button, FlatList, ActivityIndicator, SafeAreaView, Image, ScrollView} from 'react-native';
+import { TouchableOpacity,StyleSheet, Text, View,Button, FlatList, ActivityIndicator, SafeAreaView, Image, ScrollView} from 'react-native';
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
  
 // function SupportScreen({navigation}){
 class SupportScreen extends Component{
@@ -11,7 +12,6 @@ class SupportScreen extends Component{
       coins: [],
       loading: false
   }
-
   componentDidMount = async() => {
     this.setState({ loading :true })
      
@@ -25,11 +25,37 @@ class SupportScreen extends Component{
       this.props.navigation.navigate('homecopia', { coin });
       //console.log(coin)
   }
+
+
+goBack=()=>{
+    this.props.navigation.goBack();
+  }
    render(){
       const { coins, loading } = this.state;
 
       return(
             <SafeAreaView style= {styles.container}>
+                
+<View style={{ width: 300 }}>
+<View style={styles.buttonGreen}>
+                    <TouchableOpacity onPress={this.goBack}>
+                   <LinearGradient
+                   colors={['#08d4c4', '#01ab9d']}
+                   style={styles.signIn}
+                   >
+                        <MaterialIcons
+                    name="navigate-before"
+                    color="#fff"
+                    size={20}
+                   />
+                   <Text style={styles.textSign}>Regresar</Text> 
+                         
+                   </LinearGradient>
+           </TouchableOpacity>
+           </View>
+           </View>
+
+
               {loading ?
                 <ActivityIndicator
                 style={styles.loader} 

@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import {
   TouchableOpacity,
   StyleSheet,
@@ -14,10 +14,19 @@ import { LinearGradient } from "expo-linear-gradient";
 import { RadioButton } from "react-native-paper";
 
 
-export default function PaymentScreen({ navigation: { navigate, goBack} }) {
-  const [checked, setChecked] = React.useState("first");
- 
+// export default function PaymentScreen({ navigation: { navigate, goBack} }) {
+//   const [checked, setChecked] = React.useState("first");
+class PaymentScreen extends React.Component{
+    
+    state = {
+        checked: 'first',
+      };
 
+      goBack=()=>{
+        this.props.navigation.goBack();
+      }
+ render(){
+    const { checked } = this.state;
   return (
     <SafeAreaView>
         <View style={{ paddingTop: 20 }}>
@@ -55,8 +64,8 @@ export default function PaymentScreen({ navigation: { navigate, goBack} }) {
 <View style={styles.itemThree}>
 <RadioButton
               value="first"
-              status={checked === "first" ? "checked" : "unchecked"}
-              onPress={() => setChecked("first")}
+              status={checked === 'first' ? 'checked' : 'unchecked'}
+          onPress={() => { this.setState({ checked: 'first' }); }}
             /> 
   </View>
 </View>
@@ -79,8 +88,8 @@ export default function PaymentScreen({ navigation: { navigate, goBack} }) {
 <View style={styles.itemThree}>
 <RadioButton
         value="second"
-        status={ checked === 'second' ? 'checked' : 'unchecked' }
-        onPress={() => setChecked('second')}
+        status={checked === 'second' ? 'checked' : 'unchecked'}
+          onPress={() => { this.setState({ checked: 'second' }); }}
       /> 
   </View>
 </View>
@@ -102,8 +111,8 @@ export default function PaymentScreen({ navigation: { navigate, goBack} }) {
 <View style={styles.itemThree}>
 <RadioButton
               value="third"
-              status={checked === "third" ? "checked" : "unchecked"}
-              onPress={() => setChecked("third")}
+              status={checked === 'third' ? 'checked' : 'unchecked'}
+          onPress={() => { this.setState({ checked: 'third' }); }}
             ></RadioButton>
   </View>
 </View>
@@ -131,7 +140,7 @@ export default function PaymentScreen({ navigation: { navigate, goBack} }) {
 
 <View style={{ width: 300 }}>
 <View style={styles.buttonGreen}>
-                    <TouchableOpacity onPress={()=>goBack()}>
+                    <TouchableOpacity onPress={this.goBack}>
                    <LinearGradient
                    colors={['#08d4c4', '#01ab9d']}
                    style={styles.signIn}
@@ -152,6 +161,7 @@ export default function PaymentScreen({ navigation: { navigate, goBack} }) {
 </SafeAreaView>
 );
 }
+};
 
 
 const styles = StyleSheet.create({
@@ -210,4 +220,4 @@ textSign: {
   }
 });
 
-//  export default PaymentScreen;
+export default PaymentScreen;
