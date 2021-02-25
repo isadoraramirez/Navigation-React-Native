@@ -14,7 +14,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { RadioButton } from "react-native-paper";
 
 
-export default function PaymentScreen({ navigation: { navigate } }) {
+export default function PaymentScreen({ navigation: { navigate, goBack} }) {
   const [checked, setChecked] = React.useState("first");
  
 
@@ -123,6 +123,26 @@ export default function PaymentScreen({ navigation: { navigate } }) {
                     color="#fff"
                     size={20}
                    />       
+                   </LinearGradient>
+           </TouchableOpacity>
+           </View>
+           </View>
+
+
+<View style={{ width: 300 }}>
+<View style={styles.buttonGreen}>
+                    <TouchableOpacity onPress={()=>goBack()}>
+                   <LinearGradient
+                   colors={['#08d4c4', '#01ab9d']}
+                   style={styles.signIn}
+                   >
+                        <MaterialIcons
+                    name="navigate-before"
+                    color="#fff"
+                    size={20}
+                   />
+                   <Text style={styles.textSign}>Regresar</Text> 
+                         
                    </LinearGradient>
            </TouchableOpacity>
            </View>
