@@ -37,7 +37,7 @@ const SplashScreen = ({navigation}) => {
              style={styles.footer}
              animation="fadeInUpBig"
              >
-               <Text style={styles.title}>La mayor cobertura</Text>
+               <Text style={styles.title}>LA COBERTURA MÁS AMPLIA EN TODO MÉXICO</Text>
                <View style={styles.button}>
                <TouchableOpacity onPress={()=>navigation.navigate('SignInScreen')}>
                    <LinearGradient

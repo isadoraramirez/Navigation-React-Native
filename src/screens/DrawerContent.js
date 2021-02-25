@@ -69,7 +69,7 @@ import{ AuthContext } from '../components/Context';
                                 />
                             )}
                             label="Recarga"
-                            onPress={() => {props.navigation.navigate('DealsScreen')}}
+                            onPress={() => {props.navigation.navigate('RechargeScreen')}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (

@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import HomeScreen from './HomeScreen';
 import DetailsScreen from './DetailsScreen';
 import CardScreen from './CardScreen ';
-import DealsScreen from './DealsScreen';
+import RechargeScreen from './RechargeScreen';
 
 const HomeStack = createStackNavigator();
 const DetailsStack = createStackNavigator();
@@ -41,8 +41,8 @@ const MainTabScreen = () => (
         ) }}
       />
       <Tab.Screen
-        name="DealsScreen"
-        component={DealsScreen}
+        name="RechargeScreen"
+        component={RechargeScreen}
         options={{ tabBarLabel: 'Recarga',
         tabBarColor:'#694fad',
         tabBarIcon: ({ color }) => (
