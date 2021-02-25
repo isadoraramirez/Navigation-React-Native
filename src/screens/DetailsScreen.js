@@ -1,197 +1,234 @@
-import React, { Component }from 'react';
-import {   View,
-  Text,
-  Image,
-  Touchable,
-  StyleSheet,
-  StatusBar,
+import * as React from "react";
+import {
   TouchableOpacity,
-  ScrollView, } from 'react-native';
-  import { LinearGradient } from 'expo-linear-gradient';
-import Swiper from 'react-native-swiper';
-import {Ionicons, MaterialIcons} from 'react-native-vector-icons/Ionicons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  Image,
+} from "react-native";
+import {  MaterialIcons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
+import { RadioButton } from "react-native-paper";
 
+// export default function PaymentScreen({ navigation: { navigate, goBack} }) {
+//   const [checked, setChecked] = React.useState("first");
+class DetailsScreen extends React.Component {
+  state = {
+    checked: "first",
+  };
 
-class DetailsScreen extends Component {
- 
+  goBack = () => {
+    this.props.navigation.goBack();
+  };
+  recharge = () => {
+    this.props.navigation.navigate('RechargeScreen');
+  };
+  render() {
+    const { checked } = this.state;
+    return (
+      <SafeAreaView>
+        <View style={{ paddingTop: 20 }}>
+          <Text>Detalles de Consumo</Text>
+          <View style={{ paddingTop: 20 }}>
+          <View style={styles.card}>
+            <View style={styles.container}>
+              <View style={styles.itemOne}>
+              <Text
+                  style={{ fontWeight: "bold", fontSize: 13, marginTop: -20 }}
+                >
+                  <Text>Llamadas</Text>
+                  {"\n"}
+                  Inicial
+                  {"\n"}
+                  Consumo
+                  {"\n"}
+                  Restantes
+                  {"\n"}
+                  Vigencia
+                </Text>
+              </View>
+              <View style={styles.itemTwo}>
+                <Text
+                  style={{ fontWeight: "bold", fontSize: 13, marginTop: -20 }}
+                >
+                  {"\n"}
+                  Inicial
+                  {"\n"}
+                  Consumo
+                  {"\n"}
+                  Restantes
+                  {"\n"}
+                  Vigencia
+                </Text>
+              </View>
+            </View>
+          </View>
+          </View>
 
+          <View style={{ paddingTop: 20 }}>
+          <View style={styles.card}>
+            <View style={styles.container}>
+              <View style={styles.itemOne}>
+              <Text
+                  style={{ fontWeight: "bold", fontSize: 13, marginTop: -20 }}
+                >
+                  <Text>Llamadas</Text>
+                  {"\n"}
+                  Inicial
+                  {"\n"}
+                  Consumo
+                  {"\n"}
+                  Restantes
+                  {"\n"}
+                  Vigencia
+                </Text>
+              </View>
+              <View style={styles.itemTwo}>
+                <Text
+                  style={{ fontWeight: "bold", fontSize: 13, marginTop: -20 }}
+                >
+                  {"\n"}
+                  Inicial
+                  {"\n"}
+                  Consumo
+                  {"\n"}
+                  Restantes
+                  {"\n"}
+                  Vigencia
+                </Text>
+              </View>
+            </View>
+          </View>
+          </View>
 
-  componentDidMount() {
-    console.log(this.props.navigation.state);
+          <View style={{ paddingTop: 20 }}>
+          <View style={styles.card}>
+            <View style={styles.container}>
+              <View style={styles.itemOne}>
+              <Text
+                  style={{ fontWeight: "bold", fontSize: 13, marginTop: -20 }}
+                >
+                  <Text>Llamadas</Text>
+                  {"\n"}
+                  Inicial
+                  {"\n"}
+                  Consumo
+                  {"\n"}
+                  Restantes
+                  {"\n"}
+                  Vigencia
+                </Text>
+              </View>
+              <View style={styles.itemTwo}>
+                <Text
+                  style={{ fontWeight: "bold", fontSize: 13, marginTop: -20 }}
+                >
+                  {"\n"}
+                  Inicial
+                  {"\n"}
+                  Consumo
+                  {"\n"}
+                  Restantes
+                  {"\n"}
+                  Vigencia
+                </Text>
+              </View>
+            </View>
+          </View>
+          </View>
+          
+        </View>
+
+        {/*  */}
+        
+
+        <View style={{ width: 300 }}>
+          <View style={styles.buttonGreen}>
+            <TouchableOpacity onPress={this.recharge}>
+              <LinearGradient
+                colors={["#08d4c4", "#01ab9d"]}
+                style={styles.signIn}
+              >
+                <Text style={styles.textSign}>Recarga</Text>
+                <MaterialIcons name="navigate-next" color="#fff" size={20} />
+              </LinearGradient>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        <View style={{ width: 300 }}>
+          <View style={styles.buttonGreen}>
+            <TouchableOpacity onPress={this.goBack}>
+              <LinearGradient
+                colors={["#08d4c4", "#01ab9d"]}
+                style={styles.signIn}
+              >
+                <MaterialIcons name="navigate-before" color="#fff" size={20} />
+                <Text style={styles.textSign}>Regresar</Text>
+              </LinearGradient>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </SafeAreaView>
+    );
   }
-
-
-
-  render(){
-  return(
-    <View style={{ flex:1,  
-     paddingTop: 30
 }
-    }>
-      <View style={styles.cardsWrapper}>
-        <Text
-          style={{
-            alignSelf: 'center',
-            fontSize: 18,
-            fontWeight: 'bold',
-            color: '#333',
-          }}>
-          Detalles de Consumo
-        </Text>
-        <View style={styles.card}>
-        
-          <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Mensajes</Text>
-            <Text style={styles.cardDetails}>Iniciales</Text>
-            <Text style={styles.cardDetails}>Consumidos</Text>
-            <Text style={styles.cardDetails}>Restantes</Text>
-            <Text style={styles.cardDetails}>Vigencia</Text>
-          </View>
-        </View>
-        <View style={styles.card}>
-        
-          <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Llamadas</Text>
-            <Text style={styles.cardDetails}>Iniciales</Text>
-            <Text style={styles.cardDetails}>Consumidos</Text>
-            <Text style={styles.cardDetails}>Restantes</Text>
-            <Text style={styles.cardDetails}>Vigencia</Text>
-          </View>
-        </View>
-        <View style={styles.card}>
-         
-          <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Internet</Text>
-            <Text style={styles.cardDetails}>Iniciales</Text>
-            <Text style={styles.cardDetails}>Consumidos</Text>
-            <Text style={styles.cardDetails}>Restantes</Text>
-            <Text style={styles.cardDetails}>Vigencia</Text>
-          </View>
-        </View>
-      </View>
-    </View>
-  )
-}
-};
 
-// const navigation =({navigation}) => {
-//   return (
-// <TouchableOpacity onPress={()=>navigation.navigate('DetailsScreen')}>
-// <LinearGradient
-// colors={['#08d4c4', '#01ab9d']}
-// style={styles.signIn}
-// >
-// <Text style={styles.textSign}>DETALLES DE CONSUMO</Text> 
-// <MaterialIcons
-//  name="navigate-next"
-//  color="#fff"
-//  size={20}
-// />       
-// </LinearGradient>
-// </TouchableOpacity> 
-// )
-// }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    paddingTop: 20,
+    paddingLeft: 15,
   },
-  sliderContainer: {
-    height: 200,
-    width: '90%',
-    marginTop: 10,
-    justifyContent: 'center',
-    alignSelf: 'center',
-    borderRadius: 8,
-  },
-
-  wrapper: {},
-
-  slide: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: 'transparent',
-    borderRadius: 8,
-  },
-  sliderImage: {
-    height: '100%',
-    width: '100%',
-    alignSelf: 'center',
-    borderRadius: 8,
-  },
-  categoryContainer: {
-    flexDirection: 'row',
-    width: '90%',
-    alignSelf: 'center',
-    marginTop: 25,
-    marginBottom: 10,
-  },
-  categoryBtn: {
-    flex: 1,
-    width: '30%',
-    marginHorizontal: 0,
-    alignSelf: 'center',
-  },
-  categoryIcon: {
-    borderWidth: 0,
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignSelf: 'center',
-    width: 70,
-    height: 70,
-    backgroundColor: '#c9f2e2',
-    borderRadius: 50,
-  },
-  categoryBtnTxt: {
-    alignSelf: 'center',
+  button: {
     marginTop: 5,
-    color: '#de4f35',
-  },
-  cardsWrapper: {
-    marginTop: 20,
-    width: '90%',
-    alignSelf: 'center',
+    borderRadius: 60,
   },
   card: {
-    height: 150,
-    marginVertical: 10,
-    flexDirection: 'row',
-    shadowColor: '#999',
-    shadowOffset: {width: 0, height: 1},
-    shadowOpacity: 0.8,
-    shadowRadius: 2,
-    elevation: 5,
+    height: 120,
+    width: "93%",
+    backgroundColor: "white",
+    borderRadius: 15,
+    elevation: 10,
+    paddingTop: 20,
   },
-  cardImgWrapper: {
-    flex: 1,
+  profileImg: {
+    width: 50,
+    height: 30,
+    borderRadius: 20,
   },
-  cardImg: {
-    height: '100%',
-    width: '100%',
-    alignSelf: 'center',
-    borderRadius: 8,
-    borderBottomRightRadius: 0,
-    borderTopRightRadius: 0,
+  itemOne: {
+    width: "30%",
+    alignItems: "center",
   },
-  cardInfo: {
-    flex: 2,
-    padding: 10,
-    borderColor: '#ccc',
-    borderWidth: 1,
-    borderLeftWidth: 0,
-    borderBottomRightRadius: 8,
-    borderTopRightRadius: 8,
-    backgroundColor: '#fff',
+  itemTwo: {
+    width: "40%",
+    alignItems: "center",
   },
-  cardTitle: {
-    fontWeight: 'bold',
+  itemThree: {
+    width: "30%",
+    alignItems: "center",
   },
-  cardDetails: {
-    fontSize: 12,
-    marginBottom:12,
-    color: '#444',
+  buttonGreen: {
+    alignItems: "flex-end",
+    marginTop: 30,
+  },
+  signIn: {
+    width: 200,
+    height: 40,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 50,
+    flexDirection: "row",
+  },
+  textSign: {
+    color: "white",
+    fontWeight: "bold",
   },
 });
 
-
 export default DetailsScreen;
+
