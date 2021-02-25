@@ -14,9 +14,11 @@ export default function RechargeScreen({ navigation: { navigate } }) {
   // const PaymentScreen =({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
+      <View style={styles.subHeader}>
       <Text style={[styles.text, { color: "#41444B", fontWeight: "bold" }]}>
-        Elige un Plan
+        Elige un Plan Para Recargar
       </Text>
+      </View>
       <View>
         <TouchableOpacity onPress={() => navigate("PaymentScreen")}>
           <LinearGradient colors={["#eb4992", "#eb4992"]} style={styles.signIn}>
@@ -209,6 +211,12 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     flexWrap: "wrap",
+  },
+  subHeader: {
+    backgroundColor: "rgba(0, 0, 0, 0.1)",
+    padding: 10,
+    flexDirection: "row",
+    justifyContent: "space-between"
   },
   signIn: {
     borderRadius: 20,

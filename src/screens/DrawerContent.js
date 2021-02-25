@@ -105,7 +105,7 @@ import{ AuthContext } from '../components/Context';
                             onPress={() => {props.navigation.navigate('SupportScreen')}}
                         />
                     </Drawer.Section>
-                    <Drawer.Section title="Preferences">
+                    {/* <Drawer.Section title="Preferences">
                         <TouchableRipple onPress={() => {toggleTheme()}}>
                             <View style={styles.preference}>
                                 <Text>Tema Oscuro</Text>
@@ -114,7 +114,7 @@ import{ AuthContext } from '../components/Context';
                                 </View>
                             </View>
                         </TouchableRipple>
-                    </Drawer.Section>
+                    </Drawer.Section> */}
                 </View>
             </DrawerContentScrollView>
             <Drawer.Section style={styles.bottomDrawerSection}>

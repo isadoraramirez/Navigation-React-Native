@@ -119,9 +119,11 @@ const SignInScreen = ({navigation}) => {
            />
            </TouchableOpacity>
        </View>
-       <TouchableOpacity>
+       {/* <TouchableOpacity
+       onPress={()=>navigation.navigate('RecoverPassword')}
+       >
            <Text style={{color: '#009387', marginTop:15}}>Olvide mi contraseña</Text>
-       </TouchableOpacity>
+       </TouchableOpacity> */}
        <View style= {styles.button}>
            <TouchableOpacity
            style={styles.signIn}

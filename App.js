@@ -10,6 +10,8 @@ import SettingsScreen from './src/screens/SettingsScreen';
 import BookmarkScreen from './src/screens/BookmarkScreen';
 import PaymentScreen from './src/screens/PaymentScreen';
 import RechargeScreen from './src/screens/RechargeScreen';
+
+import RecoverPassword from './src/screens/RecoverPassword';
 import homecopia from './src/screens/homecopia';
 import RootStackScreen from './src/screens/RootStackScreen';
 import {DrawerContent} from './src/screens/DrawerContent';
@@ -61,6 +63,8 @@ const App = () => {
         <Drawer.Screen name="BookmarkScreen" component={BookmarkScreen} /> 
         <Drawer.Screen name="RechargeScreen" component={RechargeScreen} /> 
         <Drawer.Screen name="PaymentScreen" component={PaymentScreen} /> 
+        <Drawer.Screen name="RecoverPassword" component={RecoverPassword} /> 
+        
         <Drawer.Screen name="homecopia" component={homecopia} />
       </Drawer.Navigator> 
       )

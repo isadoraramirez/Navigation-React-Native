@@ -4,12 +4,14 @@ import {
   Image,
   Text,
   Pressable,
+  TouchableOpacity,
   SectionList,
   FlatList,
   StyleSheet,
   Alert
 } from 'react-native';
-import Details from '../components/Details';
+import {  MaterialIcons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
 
 
 class CoinDetailScreen extends Component {
@@ -25,6 +27,9 @@ class CoinDetailScreen extends Component {
 
     this.setState({ coin});
   }
+  goBack = () => {
+    this.props.navigation.goBack();
+  };
 
   render() {
 
@@ -32,11 +37,27 @@ class CoinDetailScreen extends Component {
 
     return (
       <View style={styles.container}>
+        <Text>holo</Text>
         <View style={styles.subHeader}>
           <View style={styles.row}>
             <Text style={styles.titleText}>{coin.name}</Text>
 			<Text style={styles.titleText}>{coin.price_usd}</Text>
 			<Text style={styles.titleText}>{coin.symbol}</Text>
+          </View>
+        </View>
+
+
+        <View style={{ width: 300 }}>
+          <View style={styles.buttonGreen}>
+            <TouchableOpacity onPress={this.goBack}>
+              <LinearGradient
+                colors={["#08d4c4", "#01ab9d"]}
+                style={styles.signIn}
+              >
+                <MaterialIcons name="navigate-before" color="#fff" size={20} />
+                <Text style={styles.textSign}>Regresar</Text>
+              </LinearGradient>
+            </TouchableOpacity>
           </View>
         </View>
 

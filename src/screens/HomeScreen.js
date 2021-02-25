@@ -24,8 +24,8 @@ import { LinearGradient } from 'expo-linear-gradient';
                 </View>
 
                 <View style={styles.infoContainer}>
-                    <Text style={[styles.text, { fontWeight: "200", fontSize: 36 }]}>Clodomiro</Text>
-                    <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14 }]}>Ramirez</Text>
+                    <Text style={[styles.text, { fontWeight: "200", fontSize: 36 }]}>40 GB</Text>
+                    <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14 }]}>Plan Contratado</Text>
                 </View>
                 <View style={styles.infoContainer}>
                     <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14 }]}>Saldo Disponible:</Text>
@@ -63,7 +63,25 @@ import { LinearGradient } from 'expo-linear-gradient';
                         <View style={styles.activityIndicator}></View>
                         <View style={{ width: 250 }}>
                             <Text style={[styles.text, { color: "#41444B", fontWeight: "300" }]}>
+                                1500 minutos <Text style={{ fontWeight: "400" }}>de voz</Text>
+                            </Text>
+                        </View>
+                    </View>
+
+                    <View style={styles.recentItem}>
+                        <View style={styles.activityIndicator}></View>
+                        <View style={{ width: 250 }}>
+                            <Text style={[styles.text, { color: "#41444B", fontWeight: "300" }]}>
                                 compartir <Text style={{ fontWeight: "400" }}>datos</Text>
+                            </Text>
+                        </View>
+                    </View>
+
+                    <View style={styles.recentItem}>
+                        <View style={styles.activityIndicator}></View>
+                        <View style={{ width: 250 }}>
+                            <Text style={[styles.text, { color: "#41444B", fontWeight: "300" }]}>
+                                Estados Unidos <Text style={{ fontWeight: "400" }}>y Canada</Text>
                             </Text>
                         </View>
                     </View>

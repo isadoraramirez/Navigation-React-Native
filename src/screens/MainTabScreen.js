@@ -11,6 +11,7 @@ import RechargeScreen from './RechargeScreen';
 
 const HomeStack = createStackNavigator();
 const DetailsStack = createStackNavigator();
+const RechargeStack= createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
 const MainTabScreen = () => (
@@ -42,7 +43,7 @@ const MainTabScreen = () => (
       />
       <Tab.Screen
         name="RechargeScreen"
-        component={RechargeScreen}
+        component={RechargeStackScreen}
         options={{ tabBarLabel: 'Recarga',
         tabBarColor:'#694fad',
         tabBarIcon: ({ color }) => (
@@ -100,7 +101,7 @@ const HomeStackScreen = ({navigation}) => (
           fontWeight: 'bold'
         }
       }}>
-        <DetailsStack.Screen name="Details"
+        <DetailsStack.Screen name="Detalles"
         component={DetailsScreen}
         options={{
           headerLeft: ()=> (
@@ -113,6 +114,31 @@ const HomeStackScreen = ({navigation}) => (
         />
        
       </DetailsStack.Navigator>
+    );
+
+    const RechargeStackScreen = ({navigation}) => (
+      <RechargeStack.Navigator screenOptions= {{
+        headerStyle:{
+          backgroundColor: '#1f65ff',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle:{
+          fontWeight: 'bold'
+        }
+      }}>
+        <RechargeStack.Screen name="Recarga"
+        component={RechargeScreen}
+        options={{
+          headerLeft: ()=> (
+            <Icon.Button name= "ios-menu" size={25}
+            backgroundColor="#1f65ff" onPress={()=> {navigation.openDrawer()
+            }}>
+            </Icon.Button>
+          )
+        }}
+        />
+       
+      </RechargeStack.Navigator>
     );
 
     export default MainTabScreen;

@@ -64,7 +64,7 @@ const SettingsScreen = ({navigation}) => {
         </Swiper>
       </View>
 
-      <View style={styles.categoryContainer}>
+      {/* <View style={styles.categoryContainer}>
         <TouchableOpacity
           style={styles.categoryBtn}
           onPress={() =>
@@ -96,7 +96,7 @@ const SettingsScreen = ({navigation}) => {
           <Text style={styles.categoryBtnTxt}>Internet</Text>
         </TouchableOpacity>
       </View>
-      
+       */}
 
       <View style={styles.cardsWrapper}>
         <Text
@@ -106,7 +106,7 @@ const SettingsScreen = ({navigation}) => {
             fontWeight: 'bold',
             color: '#333',
           }}>
-          Preguntas Frecuentes
+         Datos de Facturación
         </Text>
         <View style={styles.card}>
         

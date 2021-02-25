@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import {  MaterialIcons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
-import { RadioButton } from "react-native-paper";
+
 
 // export default function PaymentScreen({ navigation: { navigate, goBack} }) {
 //   const [checked, setChecked] = React.useState("first");
@@ -28,6 +28,8 @@ class DetailsScreen extends React.Component {
     const { checked } = this.state;
     return (
       <SafeAreaView>
+        <View style={styles.titleBar}>
+                </View>
         <View style={{ paddingTop: 20 }}>
           <Text>Detalles de Consumo</Text>
           <View style={{ paddingTop: 20 }}>
@@ -183,6 +185,12 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingLeft: 15,
   },
+  titleBar: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 15,
+    marginHorizontal: 16
+},
   button: {
     marginTop: 5,
     borderRadius: 60,
@@ -214,7 +222,7 @@ const styles = StyleSheet.create({
   },
   buttonGreen: {
     alignItems: "flex-end",
-    marginTop: 30,
+    marginTop: 15,
   },
   signIn: {
     width: 200,
