@@ -2,6 +2,7 @@ import * as React from "react";
 import {
   TouchableOpacity,
   StyleSheet,
+  ScrollView,
   Text,
   View,
   SafeAreaView,
@@ -25,6 +26,7 @@ class PaymentScreen extends React.Component {
     const { checked } = this.state;
     return (
       <SafeAreaView>
+        <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{ paddingTop: 20 }}>
           <View style={styles.card}>
             <View style={styles.container}>
@@ -56,7 +58,7 @@ class PaymentScreen extends React.Component {
                 />
               </View>
               <View style={styles.itemTwo}>
-                <Text>Pago con tarjeta</Text>
+                <Text style={[styles.text, { color: "#41444B", fontWeight: "300" }]}>Pago con tarjeta</Text>
               </View>
               <View style={styles.itemThree}>
                 <RadioButton
@@ -81,7 +83,7 @@ class PaymentScreen extends React.Component {
                 />
               </View>
               <View style={styles.itemTwo}>
-                <Text>Pago con SPEI</Text>
+                <Text style={[styles.text, { color: "#41444B", fontWeight: "300" }]}>Pago con SPEI</Text>
               </View>
               <View style={styles.itemThree}>
                 <RadioButton
@@ -106,7 +108,7 @@ class PaymentScreen extends React.Component {
                 />
               </View>
               <View style={styles.itemTwo}>
-                <Text>Pago en Tienda de Autoservicio</Text>
+                <Text style={[styles.text, { color: "#41444B", fontWeight: "300" }]}>Pago en Tienda de Autoservicio</Text>
               </View>
               <View style={styles.itemThree}>
                 <RadioButton
@@ -121,7 +123,7 @@ class PaymentScreen extends React.Component {
           </View>
         </View>
 
-        <View style={{ width: 300 }}>
+        
           <View style={styles.buttonGreen}>
             <TouchableOpacity onPress={() => navigate("DetailsScreen")}>
               <LinearGradient
@@ -133,9 +135,9 @@ class PaymentScreen extends React.Component {
               </LinearGradient>
             </TouchableOpacity>
           </View>
-        </View>
+       
 
-        <View style={{ width: 300 }}>
+        
           <View style={styles.buttonGreen}>
             <TouchableOpacity onPress={this.goBack}>
               <LinearGradient
@@ -147,7 +149,7 @@ class PaymentScreen extends React.Component {
               </LinearGradient>
             </TouchableOpacity>
           </View>
-        </View>
+        </ScrollView>
       </SafeAreaView>
     );
   }
@@ -166,12 +168,12 @@ const styles = StyleSheet.create({
     borderRadius: 60,
   },
   card: {
-    height: 120,
+    height: 90,
     width: "93%",
     backgroundColor: "white",
     borderRadius: 15,
     elevation: 10,
-    paddingTop: 20,
+    paddingTop: 8,
   },
   profileImg: {
     width: 50,
@@ -191,7 +193,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   buttonGreen: {
-    alignItems: "flex-end",
+    alignItems: "center",
     marginTop: 30,
   },
   signIn: {

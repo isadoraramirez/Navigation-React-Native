@@ -1,9 +1,14 @@
-import React from "react";
+import React, { Component} from "react";
+import Http from '../libs/http';
 import { TouchableOpacity, StyleSheet,Button, Text, View, SafeAreaView, Image, ScrollView } from "react-native";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { LinearGradient } from 'expo-linear-gradient';
 
- const HomeScreen =({navigation}) => {
+//  const HomeScreen =({navigation}) => {
+    class HomeScreen extends Component{
+
+        render(){
+
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
@@ -24,7 +29,7 @@ import { LinearGradient } from 'expo-linear-gradient';
                 </View>
 
                 <View style={styles.infoContainer}>
-                    <Text style={[styles.text, { fontWeight: "200", fontSize: 36 }]}>40 GB</Text>
+                    <Text style={[styles.text, { fontWeight: "200", fontSize: 36 }]}>$ 300</Text>
                     <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14 }]}>Plan Contratado</Text>
                 </View>
                 <View style={styles.infoContainer}>
@@ -34,7 +39,7 @@ import { LinearGradient } from 'expo-linear-gradient';
                 <View style={styles.statsContainer}>
                     <View style={styles.statsBox}>
                         <Text style={[styles.text, { fontSize: 24 }]}>483</Text>
-                        <Text style={[styles.text, styles.subText]}>Lamadas</Text>
+                        <Text style={[styles.text, styles.subText]}>Llamadas</Text>
                     </View>
                     <View style={[styles.statsBox, { borderColor: "#DFD8C8", borderLeftWidth: 1, borderRightWidth: 1 }]}>
                         <Text style={[styles.text, { fontSize: 24 }]}>45,844</Text>
@@ -46,7 +51,7 @@ import { LinearGradient } from 'expo-linear-gradient';
                     </View>
                 </View>
 
-                <View style={{ marginTop: 32 }}>
+                <View style={{ marginTop: 15 }}>
                 </View>
                 <Text style={[styles.subText, styles.recent]}>Servicios Contratados</Text>
                 <View style={{ alignItems: "center" }}>
@@ -54,7 +59,7 @@ import { LinearGradient } from 'expo-linear-gradient';
                         <View style={styles.activityIndicator}></View>
                         <View style={{ width: 250 }}>
                             <Text style={[styles.text, { color: "#41444B", fontWeight: "300" }]}>
-                                Plan 100gb <Text style={{ fontWeight: "400" }}>todo incluido</Text> mas <Text style={{ fontWeight: "400" }}>mensajes ilimitados</Text>
+                                Plan $ 300 <Text style={{ fontWeight: "400" }}>todo incluido</Text> mas <Text style={{ fontWeight: "400" }}>mensajes ilimitados</Text>
                             </Text>
                         </View>
                     </View>
@@ -85,7 +90,7 @@ import { LinearGradient } from 'expo-linear-gradient';
                             </Text>
                         </View>
                     </View>
-
+{/* 
                     <View style={styles.button}>
                     <TouchableOpacity onPress={()=>navigation.navigate('DetailsScreen')}>
                    <LinearGradient
@@ -100,12 +105,13 @@ import { LinearGradient } from 'expo-linear-gradient';
                    />       
                    </LinearGradient>
            </TouchableOpacity>
-           </View>
+           </View> */}
 
                 </View>
             </ScrollView>
         </SafeAreaView>
     );
+}
 }
 
 const styles = StyleSheet.create({
@@ -115,7 +121,7 @@ const styles = StyleSheet.create({
     },
     text: {
         // fontFamily: "HelveticaNeue",
-        color: "#52575D"
+        // color: "#52575D"
     },
     button: {
       alignItems: 'flex-end',

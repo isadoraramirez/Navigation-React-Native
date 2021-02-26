@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   Touchable,
 } from "react-native";
-import { CreditCardInput } from "react-native-credit-card-input";
+//import { CreditCardInput } from "react-native-credit-card-input";
 
 class CardScreen extends Component {
   _onFocus = (field) => console.log("focusing", field);
