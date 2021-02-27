@@ -269,7 +269,8 @@ const styles = StyleSheet.create({
   signIn: {
     borderRadius: 20,
     height: 110,
-    width: 349,
+    width: 360,
+    elevation: 10,
   },
   itemOne: {
     width: "25%",

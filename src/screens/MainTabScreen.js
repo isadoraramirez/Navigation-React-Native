@@ -68,7 +68,7 @@ const MainTabScreen = () => (
 const HomeStackScreen = ({navigation}) => (
     <HomeStack.Navigator screenOptions= {{
       headerStyle:{
-        backgroundColor: '#009387',
+        backgroundColor: '#1f65ff',
       },
       headerTintColor: '#fff',
       headerTitleStyle:{
@@ -80,7 +80,7 @@ const HomeStackScreen = ({navigation}) => (
       options={{title:'Inicio',
       headerLeft: ()=> (
         <Icon.Button name= "ios-menu" size={25}
-        backgroundColor="#009387" onPress={()=> {navigation.openDrawer()
+        backgroundColor="#1f65ff" onPress={()=> {navigation.openDrawer()
         }}>
         </Icon.Button>
       )

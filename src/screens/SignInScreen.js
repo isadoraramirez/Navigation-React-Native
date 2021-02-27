@@ -2,7 +2,8 @@ import React from 'react';
 import { 
     View, 
     Text, 
-    TouchableOpacity, 
+    TouchableOpacity,
+    ImageBackground, 
     TextInput,
     Platform,
     StyleSheet ,
@@ -97,8 +98,8 @@ const SignInScreen = ({navigation}) => {
         } );
 
         if ( data.username.length == 0 || data.password.length == 0 ) {
-            Alert.alert('Wrong Input!', 'Username or password field cannot be empty.', [
-                {text: 'Okay'}
+            Alert.alert('Ups!', 'Usuario o contraseña incorrectos.', [
+                {text: 'Entendido'}
             ]);
             return;
         }
@@ -114,10 +115,13 @@ const SignInScreen = ({navigation}) => {
 
     return (
       <View style={styles.container}>
-          <StatusBar backgroundColor='#009387' barStyle="light-content"/>
-        <View style={styles.header}>
-            <Text style={styles.text_header}>¡Bienvenido!</Text>
-        </View>
+          {/* <StatusBar 
+          backgroundColor='#009387' 
+          barStyle="light-content"
+          /> */}
+          <ImageBackground source={require('../../assets/background.jpeg')}
+               style={styles.bckg}>
+                   <Text style={styles.text_header}>¡Bienvenido!</Text>
         <Animatable.View 
             animation="fadeInUpBig"
             style={[styles.footer, {
@@ -238,6 +242,7 @@ const SignInScreen = ({navigation}) => {
                 </TouchableOpacity> */}
             </View>
         </Animatable.View>
+        </ImageBackground>
       </View>
     );
 };
@@ -250,13 +255,8 @@ const styles = StyleSheet.create({
     bckg:{
         flex: 2,
           justifyContent: 'center',
+          paddingTop: 150
       },
-    header: {
-        flex: 1,
-        justifyContent: 'flex-end',
-        paddingHorizontal: 20,
-        paddingBottom: 50
-    },
     footer: {
         flex: 3,
         backgroundColor: '#fff',
@@ -268,7 +268,9 @@ const styles = StyleSheet.create({
     text_header: {
         color: '#fff',
         fontWeight: 'bold',
-        fontSize: 30
+        fontSize: 30,
+        paddingBottom: 130,
+       
     },
     text_footer: {
         color: '#05375a',
