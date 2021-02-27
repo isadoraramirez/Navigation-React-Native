@@ -38,7 +38,7 @@ class RechargeScreen extends React.Component {
       <SafeAreaView style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.subHeader}>
-          <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14 }]}>
+          <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14,paddingLeft: 10, paddingBottom: 10, }]}>
             Elige un Plan Para Recargar
           </Text>
         </View>

@@ -30,7 +30,7 @@ class DetailsScreen extends React.Component {
     return (
       <SafeAreaView style={styles.Container}>
         <ScrollView showsVerticalScrollIndicator={false}>
-
+        <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14,paddingLeft: 20}]}>Detalles de consumo</Text>
         <View style={styles.card}>
         <View style={styles.infoContainer}>
                     <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14,paddingLeft: 20}]}>Mensajes</Text>
@@ -41,7 +41,7 @@ class DetailsScreen extends React.Component {
                         <Text style={[styles.text, styles.subText]}>Contratados</Text>
                     </View>
                     <View style={[styles.statsBox, { borderColor: "#DFD8C8", borderLeftWidth: 1, borderRightWidth: 1 }]}>
-                        <Text style={[styles.text, { fontSize: 24 }]}>45,844</Text>
+                        <Text style={[styles.text, { fontSize: 24 }]}>444</Text>
                         <Text style={[styles.text, styles.subText]}>Consumidos</Text>
                     </View>
                     <View style={styles.statsBox}>
@@ -57,15 +57,15 @@ class DetailsScreen extends React.Component {
                 </View>
         <View style={styles.statsContainer}>
                     <View style={styles.statsBox}>
-                        <Text style={[styles.text, { fontSize: 24 }]}>483</Text>
+                        <Text style={[styles.text, { fontSize: 24 }]}>50</Text>
                         <Text style={[styles.text, styles.subText]}>Contratadas</Text>
                     </View>
                     <View style={[styles.statsBox, { borderColor: "#DFD8C8", borderLeftWidth: 1, borderRightWidth: 1 }]}>
-                        <Text style={[styles.text, { fontSize: 24 }]}>45,844</Text>
+                        <Text style={[styles.text, { fontSize: 24 }]}>8</Text>
                         <Text style={[styles.text, styles.subText]}>Consumidas</Text>
                     </View>
                     <View style={styles.statsBox}>
-                        <Text style={[styles.text, { fontSize: 24 }]}>302</Text>
+                        <Text style={[styles.text, { fontSize: 24 }]}>10</Text>
                         <Text style={[styles.text, styles.subText]}>Restantes</Text>
                     </View>
                 </View>
@@ -73,19 +73,19 @@ class DetailsScreen extends React.Component {
 
                 <View style={styles.card}>
         <View style={styles.infoContainer}>
-                    <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14,paddingLeft: 20}]}>GB</Text>
+                    <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14,paddingLeft: 50}]}>GB</Text>
                 </View>
         <View style={styles.statsContainer}>
                     <View style={styles.statsBox}>
-                        <Text style={[styles.text, { fontSize: 24 }]}>483</Text>
+                        <Text style={[styles.text, { fontSize: 24 }]}>200</Text>
                         <Text style={[styles.text, styles.subText]}>Contratados</Text>
                     </View>
                     <View style={[styles.statsBox, { borderColor: "#DFD8C8", borderLeftWidth: 1, borderRightWidth: 1 }]}>
-                        <Text style={[styles.text, { fontSize: 24 }]}>45,844</Text>
+                        <Text style={[styles.text, { fontSize: 24 }]}>35</Text>
                         <Text style={[styles.text, styles.subText]}>Consumidos</Text>
                     </View>
                     <View style={styles.statsBox}>
-                        <Text style={[styles.text, { fontSize: 24 }]}>302</Text>
+                        <Text style={[styles.text, { fontSize: 24 }]}>32</Text>
                         <Text style={[styles.text, styles.subText]}>Restantes</Text>
                     </View>
                 </View>
