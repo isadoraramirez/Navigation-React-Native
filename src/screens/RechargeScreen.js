@@ -16,24 +16,27 @@ import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 // export default function RechargeScreen({ navigation: { navigate } }) {
 class RechargeScreen extends React.Component {
-  state = {
-    coins: [],
-  };
-  componentDidMount = async () => {
-    // this.setState({ loading :true })
+  // state = {
+  //   coins: [],
+  // };
+  // componentDidMount = async () => {
+  //   // this.setState({ loading :true })
 
-    const res = await Http.instance.get(
-      "https://api.coinlore.net/api/tickers/"
-    );
+  //   const res = await Http.instance.get(
+  //     "https://api.coinlore.net/api/tickers/"
+  //   );
 
-    this.setState({ coins: res.data });
+  //   this.setState({ coins: res.data });
   
-  };
-  pay = () => {
-    this.props.navigation.navigate('PaymentScreen');
-  };
+  // };
+  // pay = () => {
+  //   this.props.navigation.navigate('PaymentScreen');
+  // };
+  constructor(props){
+    super(props)
+  }
   render() {
-    const { coins, loading } = this.state;
+    // const { coins, loading } = this.state;
     return (
       <SafeAreaView style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
@@ -43,7 +46,10 @@ class RechargeScreen extends React.Component {
           </Text>
         </View>
         <View>
-          <TouchableOpacity onPress={this.pay}
+          <TouchableOpacity 
+          onPress={()=>this.props.navigation.navigate('PaymentScreen', {price: '$300',gigas: '40GB',minutes:'1500 minutos' ,messages: '1000 SMS'})}
+          //onPress={this.pay}
+
         //   data={coins}
         //   renderItem={({ item }) => 
         //    <Details
@@ -100,7 +106,7 @@ class RechargeScreen extends React.Component {
         </View>
 
         <View style={styles.box}>
-          <TouchableOpacity onPress={this.pay}>
+          <TouchableOpacity onPress={()=>this.props.navigation.navigate('PaymentScreen', {price: '$200',gigas: '40GB',minutes:'1500 minutos' ,messages: '1000 SMS'})}>
             <LinearGradient
               colors={["#f26316", "#f07350"]}
               style={styles.signIn}
@@ -149,7 +155,7 @@ class RechargeScreen extends React.Component {
         </View>
 
         <View style={styles.box}>
-          <TouchableOpacity onPress={this.pay}>
+          <TouchableOpacity onPress={()=>this.props.navigation.navigate('PaymentScreen', {price: '$150',gigas: '8GB',minutes:'1500 minutos' ,messages: '500 SMS'})}>
             <LinearGradient
               colors={["#e08351", "#edb400"]}
               style={styles.signIn}
@@ -198,7 +204,7 @@ class RechargeScreen extends React.Component {
         </View>
 
         <View style={styles.box}>
-          <TouchableOpacity onPress={this.pay}>
+          <TouchableOpacity onPress={()=>this.props.navigation.navigate('PaymentScreen', {price: '$100',gigas: '5GB',minutes:'1500 minutos' ,messages: '500 SMS'})}>
             <LinearGradient
               colors={["#edb600", "#edb620"]}
               style={styles.signIn}

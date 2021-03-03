@@ -19,11 +19,15 @@ class PaymentScreen extends React.Component {
     checked: "first",
   };
 
+  constructor(props){
+    super(props)
+  }
   goBack = () => {
     this.props.navigation.goBack();
   };
   render() {
     const { checked } = this.state;
+    const {price,gigas,minutes,messages}= this.props.route.params;
     return (
       <SafeAreaView>
         <ScrollView showsVerticalScrollIndicator={false}>
@@ -37,11 +41,10 @@ class PaymentScreen extends React.Component {
                 <Text
                   style={{ fontWeight: "bold", fontSize: 13, marginTop: -20 }}
                 >
-                  40 GB{"\n"}
-                  {"\n"}
-                  1500 minutos{"\n"}
-                  {"\n"}
-                  1000 SMS
+                  {JSON.stringify(price)}{"\n"}
+                  {gigas}{"\n"}
+                  {minutes}{"\n"}
+                  {messages}
                 </Text>
               </View>
             </View>

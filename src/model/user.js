@@ -4,7 +4,8 @@ export default Users = [
         email: 'user1@email.com',
         username: 'eli1', 
         password: 'elizabeth', 
-        userToken: 'token123'
+        userToken: 'token123',
+        cuenta: 'premium'
     },
     {
         id: 2, 
