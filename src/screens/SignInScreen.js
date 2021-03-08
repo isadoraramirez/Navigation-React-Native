@@ -111,6 +111,18 @@ const SignInScreen = ({navigation}) => {
             return;
         }
         signIn(foundUser);
+        // fetch('http:'),{
+        //     method: 'POST',
+        //     headers:{
+        //         Accept: 'application/json',
+        //         'Content-type': 'application/json',
+        //     },
+        //     body: JSON.stringify({
+        //         userName: this.state.username,
+        //         password: this.state.password,
+        //     }),
+
+        // }
     }
 
     return (

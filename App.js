@@ -28,6 +28,7 @@ import {DrawerContent} from './src/screens/DrawerContent';
 import { AuthContext } from './src/components/Context';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+
 const Drawer = createDrawerNavigator();
 
 const App = () => {
