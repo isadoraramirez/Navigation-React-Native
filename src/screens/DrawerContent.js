@@ -22,10 +22,9 @@ import{ AuthContext } from '../components/Context';
                     <View style={styles.userInfoSection}>
                         <View style={{flexDirection:'row',marginTop:15}}>
                             <Avatar.Image
-                            source={{
-                                uri:'https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes.png'
-                            }}
+                            source={require("../../assets/avatar.png")}
                             size={50}
+                            backgroundColor= {'white'}
                             />
                             <View style={{marginLeft: 15,flexDirection: 'column'}}>
                               <Title style={styles.title}>Usuario
@@ -40,8 +39,12 @@ import{ AuthContext } from '../components/Context';
                                <Caption style={styles.caption}>Numero</Caption>
                              </View>
                              <View >
-                               <Paragraph style={[styles.paragraph, styles.caption]}>Plan</Paragraph>
-                               <Caption style={styles.caption}>Total</Caption>
+                               <Paragraph style={[styles.paragraph, styles.caption]}>100Gb</Paragraph>
+                               <Caption style={styles.caption}>Plan</Caption>
+                             </View>
+                             <View >
+                               <Paragraph style={[styles.paragraph, styles.caption]}>11/03/22</Paragraph>
+                               <Caption style={styles.caption}>Vigencia</Caption>
                              </View>
                         </View>
                     </View>
@@ -54,19 +57,19 @@ import{ AuthContext } from '../components/Context';
                                 size={size}
                                 />
                             )}
-                            label="Home"
+                            label="Inicio"
                             onPress={() => {props.navigation.navigate('Home')}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="account-outline" 
+                                name="credit-card" 
                                 color={color}
                                 size={size}
                                 />
                             )}
-                            label="Profile"
-                            onPress={() => {props.navigation.navigate('Profile')}}
+                            label="Recarga"
+                            onPress={() => {props.navigation.navigate('RechargeScreen')}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
@@ -76,7 +79,7 @@ import{ AuthContext } from '../components/Context';
                                 size={size}
                                 />
                             )}
-                            label="Bookmarks"
+                            label="Referencia de Pago"
                             onPress={() => {props.navigation.navigate('BookmarkScreen')}}
                         />
                         <DrawerItem 
@@ -87,7 +90,7 @@ import{ AuthContext } from '../components/Context';
                                 size={size}
                                 />
                             )}
-                            label="Settings"
+                            label="Datos de Facturación"
                             onPress={() => {props.navigation.navigate('SettingsScreen')}}
                         />
                         <DrawerItem 
@@ -98,20 +101,20 @@ import{ AuthContext } from '../components/Context';
                                 size={size}
                                 />
                             )}
-                            label="Support"
+                            label="Ayuda"
                             onPress={() => {props.navigation.navigate('SupportScreen')}}
                         />
                     </Drawer.Section>
-                    <Drawer.Section title="Preferences">
+                    {/* <Drawer.Section title="Preferences">
                         <TouchableRipple onPress={() => {toggleTheme()}}>
                             <View style={styles.preference}>
-                                <Text>Dark Theme</Text>
+                                <Text>Tema Oscuro</Text>
                                 <View pointerEvents="none">
                                     <Switch value={isDarkTheme}/>
                                 </View>
                             </View>
                         </TouchableRipple>
-                    </Drawer.Section>
+                    </Drawer.Section> */}
                 </View>
             </DrawerContentScrollView>
             <Drawer.Section style={styles.bottomDrawerSection}>
@@ -123,7 +126,7 @@ import{ AuthContext } from '../components/Context';
                         size={size}
                         />
                     )}
-                    label="Sign Out"
+                    label="Salir"
                     onPress={() => {signOut()}}
                 />
             </Drawer.Section>
@@ -162,6 +165,7 @@ const styles = StyleSheet.create({
     paragraph: {
       fontWeight: 'bold',
       marginRight: 3,
+      marginRight: 30,
     },
     drawerSection: {
       marginTop: 15,

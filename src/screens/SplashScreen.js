@@ -2,6 +2,7 @@ import React from 'react';
 import { 
     View, 
     Text, 
+    ImageBackground,
     Button,
     TouchableOpacity, 
     Dimensions,
@@ -13,11 +14,14 @@ import * as Animatable from 'react-native-animatable';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useTheme } from '@react-navigation/native';
+
 const SplashScreen = ({navigation}) => {
     const { colors } = useTheme();
 
     return (
        <View style={styles.container}>
+         <ImageBackground source={require('../../assets/background.jpeg')}
+               style={styles.bckg}>
            <View style={styles.header}>
                <Animatable.Image
                 animation="bounceIn"
@@ -26,20 +30,21 @@ const SplashScreen = ({navigation}) => {
                style={styles.logo}
                resizeMode="stretch"
                />
+               <Text style={styles.header_red}>Red</Text>
+               <Text style={styles.header_title}>Potencia</Text>
            </View>
            <Animatable.View 
              style={styles.footer}
              animation="fadeInUpBig"
              >
-               <Text style={styles.title}>Siempre Conectados!</Text>
-               <Text style={styles.text}>Inicia Sesión</Text>
+               <Text style={styles.title}>LA COBERTURA MÁS AMPLIA EN TODO MÉXICO</Text>
                <View style={styles.button}>
                <TouchableOpacity onPress={()=>navigation.navigate('SignInScreen')}>
                    <LinearGradient
                    colors={['#08d4c4', '#01ab9d']}
                    style={styles.signIn}
                    >
-                   <Text style={styles.textSign}>Registrarme</Text> 
+                   <Text style={styles.textSign}>Entrar</Text> 
                    <MaterialIcons
                     name="navigate-next"
                     color="#fff"
@@ -49,17 +54,37 @@ const SplashScreen = ({navigation}) => {
            </TouchableOpacity>
            </View>
            </Animatable.View>
+           </ImageBackground>
        </View>
     );
 };
 
 const {height} = Dimensions.get("screen");
-const height_logo = height * 0.28;
+//const height_logo = height * 0.28;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1, 
-    backgroundColor: '#009387'
+    // backgroundColor: '#009387'
+  },
+  bckg:{
+    flex: 2,
+      justifyContent: 'center',
+  },
+  header_red:{
+    flexDirection: 'row',
+    alignSelf:'flex-start',
+    paddingLeft:125,
+    paddingTop: 10,
+    fontSize: 40,
+    fontWeight: 'bold',
+    color: '#fff',  
+  },
+  header_title:{
+    
+    fontSize: 38,
+    fontWeight: 'bold',
+    color: '#fff',
   },
   header: {
       flex: 2,
@@ -75,11 +100,12 @@ const styles = StyleSheet.create({
       paddingHorizontal: 30
   },
   logo: {
-      width: height_logo,
-      height: height_logo
+      marginTop:15
+    //   width: height_logo,
+    //   height: height_logo   #01ab9d
   },
   title: {
-      color: '#05375a',
+      color: '#01ab9d',
       fontSize: 30,
       fontWeight: 'bold'
   },
