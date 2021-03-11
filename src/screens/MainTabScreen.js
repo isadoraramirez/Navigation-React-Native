@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from './HomeScreen';
 import DetailsScreen from './DetailsScreen';
-import CardScreen from './CardScreen ';
+
 import RechargeScreen from './RechargeScreen';
 
 const HomeStack = createStackNavigator();
@@ -50,17 +50,7 @@ const MainTabScreen = () => (
             <Icon name="pricetag" color={color} size= {26}/>
         ) }}
       />
-      {/* <Tab.Screen
-        name="Explore"
-        component={CardScreen}
-        options={{ 
-            tabBarLabel: 'Recarga',
-            tabBarColor:'#d02860',
-            tabBarIcon: ({ color }) => (
-                <Icon name="ios-aperture" color={color} size= {26}/>
-            )
-         }}
-      /> */}
+  
     </Tab.Navigator>
   );
 
