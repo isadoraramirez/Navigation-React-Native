@@ -148,10 +148,6 @@ const SignInScreen = ({navigation}) => {
       behavior='padding'
       keyboardVerticalOffset={keyboardVerticalOffset}  
       style={styles.container}>
-          {/* <StatusBar 
-          backgroundColor='#009387' 
-          barStyle="light-content"
-          /> */}
           <ImageBackground source={require('../../assets/background.jpeg')}
                style={styles.bckg}>
                    <Text style={styles.text_header}>¡Bienvenido!</Text>

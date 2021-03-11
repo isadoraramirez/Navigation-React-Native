@@ -133,7 +133,7 @@ class PaymentScreen extends React.Component {
             
             onPress= {
               ()=>{
-                 this.state.checked === "card" ? this.props.navigation.navigate('SupportScreen', {
+                 this.state.checked === "card" ? this.props.navigation.navigate('CardScreen', {
                   price
                }): 
                  this.props.navigation.navigate('SupportScreen', {

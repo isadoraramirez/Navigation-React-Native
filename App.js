@@ -21,6 +21,7 @@ import PaymentScreen from './src/screens/PaymentScreen';
 import RechargeScreen from './src/screens/RechargeScreen';
 
 import RecoverPassword from './src/screens/RecoverPassword';
+import CardScreen from './src/screens/CardScreen';
 import homecopia from './src/screens/homecopia';
 import RootStackScreen from './src/screens/RootStackScreen';
 import {DrawerContent} from './src/screens/DrawerContent';
@@ -170,6 +171,7 @@ const App = () => {
         <Drawer.Screen name="PaymentScreen" component={PaymentScreen} /> 
         <Drawer.Screen name="RecoverPassword" component={RecoverPassword} /> 
         
+        <Drawer.Screen name="CardScreen" component={CardScreen} />
         <Drawer.Screen name="homecopia" component={homecopia} />
 
       </Drawer.Navigator> 
