@@ -3,7 +3,7 @@ import * as React from "react";
 import { Alert,StyleSheet, View, Text, TextInput, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {  MaterialIcons } from "@expo/vector-icons";
-//import openpay from 'react-native-openpay';
+
 
 
 class CardScreen extends React.Component {
@@ -19,8 +19,6 @@ class CardScreen extends React.Component {
     const alerta = ()=> Alert.alert("datos mandados= Pago por "
     // +this.state.checked
      )
-  
-
   return (
     <View style={styles.container}>
       <View style={styles.textbox}>
