@@ -7,7 +7,12 @@ import { LinearGradient } from "expo-linear-gradient";
  
 // function SupportScreen({navigation}){
 class SupportScreen extends Component{
-
+  constructor(props){
+    super(props);
+    this.state={checked: ""
+    
+    }
+  }
   state ={
       coins: [],
       loading: false
@@ -32,7 +37,7 @@ goBack=()=>{
   }
    render(){
       const { coins, loading } = this.state;
-
+      const {price}= this.props.route.params;
       return(
             <SafeAreaView style= {styles.container}>
                 
@@ -63,7 +68,7 @@ goBack=()=>{
                 size="large"/>
               :null
               }
-       <Text>Saldos</Text>
+       <Text>Saldos {price}</Text>
        <FlatList
           data={coins}
           renderItem={({ item }) => 

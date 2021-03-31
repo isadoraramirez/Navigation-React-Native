@@ -6,12 +6,13 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from './HomeScreen';
 import DetailsScreen from './DetailsScreen';
-import CardScreen from './CardScreen ';
 import RechargeScreen from './RechargeScreen';
+import CardScreen from './CardScreen';
 
 const HomeStack = createStackNavigator();
 const DetailsStack = createStackNavigator();
 const RechargeStack= createStackNavigator();
+const CardStack= createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
 const MainTabScreen = () => (
@@ -50,17 +51,17 @@ const MainTabScreen = () => (
             <Icon name="pricetag" color={color} size= {26}/>
         ) }}
       />
-      {/* <Tab.Screen
-        name="Explore"
-        component={CardScreen}
-        options={{ 
-            tabBarLabel: 'Recarga',
-            tabBarColor:'#d02860',
-            tabBarIcon: ({ color }) => (
-                <Icon name="ios-aperture" color={color} size= {26}/>
-            )
-         }}
-      /> */}
+            <Tab.Screen
+        name="Card"
+        component={CardStackScreen}
+        options={{ tabBarLabel: 'Pago con Tarjeta',
+        tabBarColor:'#694fad',
+        // tabBarIcon: ({ color }) => (
+        //     <Icon name="pricetag" color={color} size= {26}/>
+        // ) 
+      }}
+      />
+  
     </Tab.Navigator>
   );
 
@@ -139,6 +140,31 @@ const HomeStackScreen = ({navigation}) => (
         />
        
       </RechargeStack.Navigator>
+    );
+
+    const CardStackScreen = ({navigation}) => (
+      <CardStack.Navigator screenOptions= {{
+        headerStyle:{
+          backgroundColor: '#1f65ff',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle:{
+          fontWeight: 'bold'
+        }
+      }}>
+        <CardStack.Screen name="Pago con Tarjeta"
+        component={CardScreen}
+        options={{
+          headerLeft: ()=> (
+            <Icon.Button name= "ios-menu" size={25}
+            backgroundColor="#1f65ff" onPress={()=> {navigation.openDrawer()
+            }}>
+            </Icon.Button>
+          )
+        }}
+        />
+       
+      </CardStack.Navigator>
     );
 
     export default MainTabScreen;

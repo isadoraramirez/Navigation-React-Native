@@ -1,5 +1,7 @@
 import React from 'react';
-import { 
+import {
+    KeyboardAvoidingView, 
+    keyboardVerticalOffset,
     View, 
     Text, 
     TouchableOpacity,
@@ -111,6 +113,22 @@ const SignInScreen = ({navigation}) => {
             return;
         }
         signIn(foundUser);
+///////////
+// const getMoviesFromApi = () => {
+//     return fetch('https://reactnative.dev/movies.json')
+//       .then((response) => response.json())
+//       .then((json) => {
+//         return json.movies;
+//       })
+//       .catch((error) => {
+//         console.error(error);
+//       });
+//   };
+
+
+////////////
+
+
         // fetch('http:'),{
         //     method: 'POST',
         //     headers:{
@@ -126,11 +144,10 @@ const SignInScreen = ({navigation}) => {
     }
 
     return (
-      <View style={styles.container}>
-          {/* <StatusBar 
-          backgroundColor='#009387' 
-          barStyle="light-content"
-          /> */}
+      <KeyboardAvoidingView 
+      behavior='padding'
+      keyboardVerticalOffset={keyboardVerticalOffset}  
+      style={styles.container}>
           <ImageBackground source={require('../../assets/background.jpeg')}
                style={styles.bckg}>
                    <Text style={styles.text_header}>¡Bienvenido!</Text>
@@ -180,7 +197,7 @@ const SignInScreen = ({navigation}) => {
 
             <Text style={[styles.text_footer, {
                 color: colors.text,
-                marginTop: 35
+                // marginTop: 35
             }]}>Contraseña</Text>
             <View style={styles.action}>
                 <Feather 
@@ -255,19 +272,19 @@ const SignInScreen = ({navigation}) => {
             </View>
         </Animatable.View>
         </ImageBackground>
-      </View>
+      </KeyboardAvoidingView>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
       flex: 1, 
-      backgroundColor: '#009387'
+    //   backgroundColor: '#009387'
     },
     bckg:{
         flex: 2,
           justifyContent: 'center',
-          paddingTop: 150
+          paddingTop: '45%'
       },
     footer: {
         flex: 3,
@@ -275,13 +292,13 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
         paddingHorizontal: 20,
-        paddingVertical: 30
+        paddingVertical: '15%'
     },
     text_header: {
         color: '#fff',
         fontWeight: 'bold',
         fontSize: 30,
-        paddingBottom: 130,
+        paddingBottom: '30%',
        
     },
     text_footer: {
@@ -293,7 +310,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         borderBottomWidth: 1,
         borderBottomColor: '#f2f2f2',
-        paddingBottom: 5
+        paddingBottom: 20
     },
     actionError: {
         flexDirection: 'row',
@@ -307,6 +324,7 @@ const styles = StyleSheet.create({
         marginTop: Platform.OS === 'ios' ? 0 : -12,
         paddingLeft: 10,
         color: '#05375a',
+        paddingTop:'10%'
     },
     errorMsg: {
         color: '#FF0000',
@@ -314,7 +332,7 @@ const styles = StyleSheet.create({
     },
     button: {
         alignItems: 'center',
-        marginTop: 50
+        marginTop: '5%'
     },
     signIn: {
         width: '100%',

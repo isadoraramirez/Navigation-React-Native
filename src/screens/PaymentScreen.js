@@ -7,20 +7,20 @@ import {
   View,
   SafeAreaView,
   Image,
+  Alert
 } from "react-native";
 import {  MaterialIcons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { RadioButton } from "react-native-paper";
 
-// export default function PaymentScreen({ navigation: { navigate, goBack} }) {
-//   const [checked, setChecked] = React.useState("first");
+
 class PaymentScreen extends React.Component {
-  state = {
-    checked: "first",
-  };
 
   constructor(props){
-    super(props)
+    super(props);
+    this.state={checked: ""
+    
+    }
   }
   goBack = () => {
     this.props.navigation.goBack();
@@ -28,6 +28,7 @@ class PaymentScreen extends React.Component {
   render() {
     const { checked } = this.state;
     const {price,gigas,minutes,messages}= this.props.route.params;
+    const alerta = ()=> Alert.alert("datos mandados= Pago por "+this.state.checked +price)
     return (
       <SafeAreaView>
         <ScrollView showsVerticalScrollIndicator={false}>
@@ -65,10 +66,10 @@ class PaymentScreen extends React.Component {
               </View>
               <View style={styles.itemThree}>
                 <RadioButton
-                  value="first"
-                  status={checked === "first" ? "checked" : "unchecked"}
+                  value="card"
+                  status={checked === "card" ? "checked" : "unchecked"}
                   onPress={() => {
-                    this.setState({ checked: "first" });
+                    this.setState({ checked: "card" });
                   }}
                 />
               </View>
@@ -90,10 +91,10 @@ class PaymentScreen extends React.Component {
               </View>
               <View style={styles.itemThree}>
                 <RadioButton
-                  value="second"
-                  status={checked === "second" ? "checked" : "unchecked"}
+                  value="spei"
+                  status={checked === "spei" ? "checked" : "unchecked"}
                   onPress={() => {
-                    this.setState({ checked: "second" });
+                    this.setState({ checked: "spei" });
                   }}
                 />
               </View>
@@ -115,10 +116,10 @@ class PaymentScreen extends React.Component {
               </View>
               <View style={styles.itemThree}>
                 <RadioButton
-                  value="third"
-                  status={checked === "third" ? "checked" : "unchecked"}
+                  value="store"
+                  status={checked === "store" ? "checked" : "unchecked"}
                   onPress={() => {
-                    this.setState({ checked: "third" });
+                    this.setState({ checked: "store" });
                   }}
                 ></RadioButton>
               </View>
@@ -128,7 +129,20 @@ class PaymentScreen extends React.Component {
 
         
           <View style={styles.buttonGreen}>
-            <TouchableOpacity onPress={() => navigate("DetailsScreen")}>
+            <TouchableOpacity 
+            
+            onPress= {
+              ()=>{
+                 this.state.checked === "card" ? this.props.navigation.navigate('CardScreen', {
+                  price
+               }): 
+                 this.props.navigation.navigate('SupportScreen', {
+                    price
+                 });
+               }
+            }
+             >
+            
               <LinearGradient
                 colors={["#08d4c4", "#01ab9d"]}
                 style={styles.signIn}
@@ -142,7 +156,8 @@ class PaymentScreen extends React.Component {
 
         
           <View style={styles.buttonGreen}>
-            <TouchableOpacity onPress={this.goBack}>
+            <TouchableOpacity 
+            onPress={this.goBack}>
               <LinearGradient
                 colors={["#08d4c4", "#01ab9d"]}
                 style={styles.signIn}
