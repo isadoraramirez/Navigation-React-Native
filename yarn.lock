@@ -7060,6 +7060,11 @@
   "resolved" "https://registry.npmjs.org/react-native-linear-gradient/-/react-native-linear-gradient-2.5.6.tgz"
   "version" "2.5.6"
 
+"react-native-openpay@^3.0.2":
+  "integrity" "sha512-QabhK8U0JvhIHWfv8TiqUfLGoIZhBVU5+t/g4hj8848oWDQWdR9C82ZTT6bVLGJYwMDrXzqqODaefxwTAgXx+w=="
+  "resolved" "https://registry.npmjs.org/react-native-openpay/-/react-native-openpay-3.0.2.tgz"
+  "version" "3.0.2"
+
 "react-native-paper@^4.7.1", "react-native-paper@>= 3.0.0":
   "integrity" "sha512-MOcDWjBOaknEpQgdm4fIOsRFIt4PJlMCgWlLk4kIe8Wv99/M0JIoxWABkAf4Lj5BuJgXjXdwr0DA/lhGY1BRoQ=="
   "resolved" "https://registry.npmjs.org/react-native-paper/-/react-native-paper-4.7.2.tgz"
